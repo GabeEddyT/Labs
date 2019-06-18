@@ -1,0 +1,151 @@
+.openlist{
+    color: lightgreen;
+}
+
+#cur1{
+    font-size: 1.25em;
+    /* line-height: 0; */
+}
+
+.soonlist{
+    color: KHAKI;
+}
+.laterlist{
+    color: lightsalmon;
+}
+.closedlist{
+    color: salmon;
+    /* position: absolute; */
+}
+
+*{
+    font-family: 'Lalezar';
+    color: WHITESMOKE;
+    font-size: 20pt;
+    /* text-transform: uppercase; */
+    /* position: absolute; */
+    /* background-color: #1f1f1f; */
+    /* z-index: 4; */
+}
+
+body{
+    background-color: #1f1f1f;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    /* z-index: 1; */
+    height: 100%;
+}
+
+h1 {
+    text-emphasis: none;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    padding-top: 1.5rem;
+}
+
+p {
+    width: auto;
+    margin: .5em;
+    
+
+}
+
+.wrapper{
+    /* position: relative; */
+    /* background-color: #df0101; */
+    /* padding: 5%; */
+    padding-top: 5%;
+    /* padding-bottom: 5%; */
+    width: 80%;
+    max-width: 1280px;
+    opacity: 0;
+    /* display: block; */
+    /* padding-bottom: 100%;     */
+    transition: opacity .4s;
+    /* height: 100%; */
+    /* border-radius: 25px; */
+    position: fixed;
+}
+
+.view{
+    align-items: center;
+    /* opacity: .5; */
+    padding: 5%;
+    /* position: absolute; */
+    display: flex;
+    /* padding-top: 15%; */
+    flex-direction: column;
+    /* z-index: 3; */
+    /* position: relative; */
+    /* width: 100%; */
+    /* background-color: #; */
+    background-color: #2f2f2f;
+    /* padding-bottom: 60vh; */
+    /* opacity: 1; */
+    border-radius: 25px;
+    height: 100%;
+    position: relative;
+    padding-bottom: 5%;
+}
+
+.close{
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMjBweCcgaGVpZ2h0PScyMHB4JyB2aWV3Qm94PScwIDAgMjAgMjAnIHpvb21BbmRQYW49J2Rpc2FibGUnPjxzdHlsZT5saW5lIHsgc3Ryb2tlOiAjZmZmZmZmOyBzdHJva2Utd2lkdGg6IDE7IH08L3N0eWxlPjxsaW5lIHgxPScyJyB5MT0nMicgeDI9JzE4JyB5Mj0nMTgnIC8+PGxpbmUgeDE9JzE4JyB5MT0nMicgeDI9JzInIHkyPScxOCcgLz48L3N2Zz4=");
+    right: 20px;
+    top: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    /* margin: 20px; */
+    /* padding: 40px; */
+    background-repeat: no-repeat;
+    background-size: 30px;
+    padding: 10px;
+    background-position-x: 15px;
+    background-position-y: 15px;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    position: absolute;
+    cursor: pointer;
+    /* border-spacing: 20px; */
+    transition: background-color .4s;
+}
+
+.close:hover{
+    background-color: #3f3f3f;
+}
+.close:active{
+    background-color: grey;
+    /* border-radius: 40px; */
+    /* padding: 20px; */
+}
+
+
+#list{    
+    opacity: 1;
+    position: absolute;
+    transition: opacity .4s;
+    z-index: 1;
+}
+
+.view article{
+    padding-top: 25px;
+
+}
+
+.hidden{
+    /* display: none; */
+    /* height: 0 !important; */
+    /* transition: display .5s; */
+}
+/* .fadeout{
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.fadein{
+
+} */

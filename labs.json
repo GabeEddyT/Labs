@@ -1,0 +1,1260 @@
+[
+	{
+		"name": "CCM 001",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 800
+					},
+					{
+						"start": 1045,
+						"end": 1230
+					},
+					{
+						"start":1515,
+						"end":2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 800
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1215,
+						"end": 1400
+					},
+					{
+						"start":1645,
+						"end":2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 800
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 800
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"link": "/labs/ccm001"
+	},
+	{
+		"name": "CCM 222",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 800
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 800
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start":1215,
+						"end":1400
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 800
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 800
+					},
+					{
+						"start":1215,
+						"end":1400
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"link": "/labs/ccm222"
+	},
+	{
+		"name": "CCM 224",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1215,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1215,
+						"end": 1400
+					},
+					{
+						"start": 1645,
+						"end": 1730
+					},
+					{
+						"start":2015,
+						"end":2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1215,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1215,
+						"end": 1400
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"link": "/labs/ccm224"
+	},
+	{
+		"name": "CCM 426",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 1730
+					},
+					{
+						"start": 2015,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 1730
+					},
+					{
+						"start": 2015,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 2015,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"link": "/labs/ccm426"
+	},
+	{
+		"name": "Joyce 101",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start":1045,
+						"end":1230
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start":1045,
+						"end":1230
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"link": "/labs/joyce101"
+	},
+	{
+		"name": "Joyce 201",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 800
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 1730
+					},
+					{
+						"start": 2015,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 800
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"link": "/labs/joyce201"
+	},
+	{
+		"name": "Joyce 210",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 1100
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 1100
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 1100
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 1100
+					},
+					{
+						"start": 1215,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"link": "/labs/joyce210"
+	},
+	{
+		"name": "Joyce 211",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 1730
+					},
+					{
+						"start": 1845,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 1730
+					},
+					{
+						"start":1845,
+						"end":2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 1730
+					},
+					{
+						"start":1845,
+						"end":2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 1730
+					},
+					{
+						"start": 1845,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"link": "/labs/joyce211"
+	},
+	{
+		"name": "Joyce 310",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1215,
+						"end": 1730
+					},
+					{
+						"start":2015,
+						"end":2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "MIC 308",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start":730,
+						"end": 1515
+					},
+					{
+						"start":1645,
+						"end":2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 730,
+						"end": 930
+					},
+					{
+						"start": 1045,
+						"end": 1230
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 730,
+						"end": 930
+					},
+					{
+						"start": 1215,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 730,
+						"end": 1230
+					},
+					{
+						"start": 1515,
+						"end": 1730
+					},
+					{
+						"start":2015,
+						"end":2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 730,
+						"end": 930
+					},
+					{
+						"start": 1045,
+						"end": 1900
+					},
+					{
+						"start":3600,
+						"end":4300
+					}
+				]
+			}
+		],
+		"link": "/labs/mic308"
+	},
+	{
+		"name": "Foster 104",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start":1215,
+						"end":1400
+					},
+					{
+						"start": 1645,
+						"end": 1730
+					},
+					{
+						"start":2015,
+						"end":2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"link": "/labs/foster104"
+	},
+	{
+		"name": "Foster 100",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 1230
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 1230
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"link": "/labs/foster100"
+	},
+	{
+		"name": "Foster 101",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 1100
+					},
+					{
+						"start": 1215,
+						"end": 1730
+					},
+					{
+						"start": 2015,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 1400
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 1100
+					},
+					{
+						"start": 1345,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start":1215,
+						"end":1400
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Foster 202",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 1730
+					},
+					{
+						"start": 2015,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start":1645,
+						"end":1730
+					},
+					{
+						"start": 2015,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1345,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"link": "/labs/foster202"
+	},
+	{
+		"name": "Ireland 012",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1215,
+						"end": 1400
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 1730
+					},
+					{
+						"start":2015,
+						"end":2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 1100
+					},
+					{
+						"start": 1515,
+						"end": 1730
+					},
+					{
+						"start":2015,
+						"end":2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"link": "/labs/ireland012"
+	},
+	{
+		"name": "Ireland 014",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 800
+					},
+					{
+						"start": 1045,
+						"end": 1230
+					},
+					{
+						"start":1515,
+						"end":1730
+					},
+					{
+						"start": 2015,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 1730
+					},
+					{
+						"start": 2015,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1215,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 1730
+					},
+					{
+						"start": 2015,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1515,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"link": "/labs/ireland014"
+	}
+]
