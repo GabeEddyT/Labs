@@ -1,4 +1,3 @@
-
 #cur1{
     font-size: 1.25em;
     /* line-height: 0; */
@@ -24,7 +23,7 @@
 }
 
 *{
-    font-family: 'Lalezar';
+    font-family: 'OrkneyMedium', sans-serif;
     color: WHITESMOKE;
     /* font-size: 20pt; */
     /* text-transform: uppercase; */
@@ -45,7 +44,7 @@ body{
 }
 
 h1 {
-    text-emphasis: none;
+    font-family: 'OrkneyMediumItalic';
     font-size: 4rem;
     margin: 0;
     padding: 0;

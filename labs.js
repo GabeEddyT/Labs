@@ -32,7 +32,7 @@
 	// Convert minutes to hours and minutes.
 	Number.prototype.toHours = function () {
 		var h = Math.trunc(this / 60);
-		return (h ? (h + "h ") : "") + this % 60 + "m";
+		return (h ? (h + "h ") : "") + this % 60 + "m";
 	}
 
 	// The venerable Timeslot, with its start and end time.
@@ -290,7 +290,7 @@
 		let title = document.querySelector(".view h1");
 		let body = document.querySelector(".view p");
 		let close = document.querySelector(".close");
-		
+
 		close.style.pointerEvents = "auto";
 		title.innerHTML = name;
 		body.innerHTML = description;
