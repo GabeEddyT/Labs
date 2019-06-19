@@ -76,7 +76,7 @@
 				]
 			}
 		],
-		"link": "/labs/ccm001"
+		"description":"Home to works of art—or works of shame and self-deprecation, depending on your outlook. Residing in the basement of CCM, this art lab has dual-monitors, art programs pre-installed, and machines good enough to run them; when they’re in the mood. Some say you can hear the cries of stressed game artists from the fourth floor, which would make sense, because there’s a stairwell next to the damn room. "
 	},
 	{
 		"name": "CCM 222",
@@ -155,7 +155,8 @@
 				]
 			}
 		],
-		"link": "/labs/ccm222"
+		"link": "/labs/ccm222",
+		"description":"The primary domain of Quality Assurance and Cody’s <em>former</em> home. Only one monitor here, but (on paper, at least) these are some of the best computers Champlain has."
 	},
 	{
 		"name": "CCM 224",
@@ -238,7 +239,8 @@
 				]
 			}
 		],
-		"link": "/labs/ccm224"
+		"link": "/labs/ccm224",
+		"description": "Taking a look at the spec sheet, one would assume that these computers are great, and fast, and always run perfectly fine. When designers touch them, however, these PCs tend to prove the opposite. As the secondary home for QA, it’ll be occupied from 5:30–7:30 on Mondays, Thursdays, and Saturdays. Other than that, this lab has a pretty open schedule."
 	},
 	{
 		"name": "CCM 426",
@@ -317,7 +319,8 @@
 				]
 			}
 		],
-		"link": "/labs/ccm426"
+		"link": "/labs/ccm426",
+		"description":"A Mac lab at the precipice of CCM. They have a tendency to start flashing randomly, subsequently refusing to be functional. But at a mere $2,299 a piece, can you really complain?"
 	},
 	{
 		"name": "Joyce 101",
@@ -396,7 +399,8 @@
 				]
 			}
 		],
-		"link": "/labs/joyce101"
+		"link": "/labs/joyce101",
+		"description":"Home to all sorts of fun and enlightening classes such as Game Architecture, Game AI, and Graphics of all kinds. Programs that you’ll probably need will not be installed by default, but at least there are dual-monitors; and most of them aren’t horrible. To the outside world, the writing on the wall may look like archaic inscriptions of a defunct language. To the programmers frantically scribbling them to solve graphics problems, they make even less sense."
 	},
 	{
 		"name": "Joyce 201",
@@ -471,7 +475,8 @@
 				]
 			}
 		],
-		"link": "/labs/joyce201"
+		"link": "/labs/joyce201",
+		"description":"A CS PC lab. Since Computer Science majors <em>clearly</em> don’t care for performant parts, why bother? These machines are equipped with GT 210s, and roar at the sight of any modern webpage."
 	},
 	{
 		"name": "Joyce 210",
@@ -542,7 +547,8 @@
 				]
 			}
 		],
-		"link": "/labs/joyce210"
+		"link": "/labs/joyce210",
+		"description":"A CS lab filled with Macs that serve the hallowed purpose of emulating your favorite Linux distribution."
 	},
 	{
 		"name": "Joyce 211",
@@ -628,8 +634,9 @@
 					}
 				]
 			}
-		],
-		"link": "/labs/joyce211"
+			],
+		"link": "/labs/joyce211",
+		"description":"Like its cousin on the block, Joyce 201, this is a CS PC lab. Woo."
 	},
 	{
 		"name": "Joyce 310",
@@ -703,7 +710,8 @@
 					}
 				]
 			}
-		]
+		],
+		"description":"A mysterious lab at the top of Joyce. I can't comment on it personally, since I don't have access to it. And after making this site, I doubt I ever will."
 	},
 	{
 		"name": "MIC 308",
@@ -786,7 +794,8 @@
 				]
 			}
 		],
-		"link": "/labs/mic308"
+		"link": "/labs/mic308",
+		"description":"You climbed all those steps to the top floor of this library and your reward is... <em>this</em>? <br/ ><br/ > I had a more witty description here, but Champlain has since replaced the old laptops with big boxes armed with the same performance."
 	},
 	{
 		"name": "Foster 104",
@@ -861,7 +870,8 @@
 				]
 			}
 		],
-		"link": "/labs/foster104"
+		"link": "/labs/foster104",
+		"description":"Home to many grunge and vaporwave-filled gaming sessions, and occasionally, work. For either task, the innards of these computers will suffice, so long as you have enough space for your repo, and don’t mind the single—albeit huge and 4K—screen life."
 	},
 	{
 		"name": "Foster 100",
@@ -932,7 +942,8 @@
 				]
 			}
 		],
-		"link": "/labs/foster100"
+		"link": "/labs/foster100",
+		"description": "A Digital Forensics lab by day... actually, that’s pretty much all it’s good for. Move along, now."
 	},
 	{
 		"name": "Foster 101",
@@ -1010,7 +1021,8 @@
 					}
 				]
 			}
-		]
+		],
+		"description":"I’m sure it’s music to <em>someone’s</em> ears."
 	},
 	{
 		"name": "Foster 202",
@@ -1089,7 +1101,8 @@
 				]
 			}
 		],
-		"link": "/labs/foster202"
+		"link": "/labs/foster202",
+		"description":"Made specifically for Cyber Security. Or Networking. Beats me."
 	},
 	{
 		"name": "Ireland 012",
@@ -1168,7 +1181,8 @@
 				]
 			}
 		],
-		"link": "/labs/ireland012"
+		"link": "/labs/ireland012",
+		"description":"There are Macs in the basement of Ireland?"
 	},
 	{
 		"name": "Ireland 014",
@@ -1255,6 +1269,7 @@
 				]
 			}
 		],
-		"link": "/labs/ireland014"
+		"link": "/labs/ireland014",
+		"description":"Are the open Macs across the hall not doing it for you? Are you afraid of the number 12? You’ve come to the adequate place."
 	}
 ]

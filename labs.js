@@ -95,10 +95,11 @@
 	// Members include the name, day-array, and a link, that a future Gabe will hopefully implement. Someday.
 	// Also fully-featured with helpful day-getters that are never used.
 	class Room {
-		constructor(name, days, link = false) {
+		constructor(name, days, link = false, description = false) {
 			this.name = name;
 			this.days = days;
 			this.link = link;
+			this.description = description;
 		}
 		get monday() {
 			return this.days[0];
@@ -137,7 +138,7 @@
 		} else {
 			para.appendChild(textNode);
 		}
-		console.log(pId);
+		
 		pId ? para.id = pId : null;
 		style ? para.style = style : null;
 		pClass ? para.classList.add(pClass) : null;
@@ -172,7 +173,7 @@
 		for (let i = 0; i < rooms.length; i++) {
 			if (timeslot = rooms[i].days[(currentDay - 1)].isContained(time)) {
 				let para = addParagraph("list", rooms[i].name + " (" + timeslot.range + ") [", rooms[i].name, false, "text-align: center", "openlist");    
-				para.onclick = ()=>{showView(rooms[i].name)};
+				para.onclick = ()=>{showView(rooms[i].name, rooms[i].description)};
 				para.style.cursor = "pointer";
 
 				// Highlight based on how much time is remaining       
@@ -199,8 +200,9 @@
 			if (timeslot = occupiedRooms[i].days[(currentDay - 1)].nextOpen(time)) {
 				if (compareTime(timeslot.start, time) <= howSoon) {					
 					let name = occupiedRooms[i].name;
+					let description = occupiedRooms[i].description;
 					let para = addParagraph("list", occupiedRooms[i].name + " (" + timeslot.range + ")  [" + compareTime(timeslot.start, time).toHours() + "]", occupiedRooms[i].name, false, "text-align: center", pClass);
-					para.addEventListener("click", ()=>{showView(name)});
+					para.addEventListener("click", ()=>{showView(name,description)});
 					para.style.cursor = "pointer";				
 				} else {
 					remaining.push(occupiedRooms[i]);
@@ -231,8 +233,9 @@
 			occupiedRooms = checkSoon(currentTime, 15, "soonlist");
 
 			// Get rid of text if there are no labs available in 15 minutes.
-			if (tempLength == occupiedRooms.length) {
-				document.getElementById("soon-15").innerHTML = null;
+			if (tempLength == occupiedRooms.length) {				
+				let child = document.getElementById("soon-15");
+				child.parentNode.removeChild(child);
 			}
 			// List rooms avaiable in an hour.
 			if (occupiedRooms.length > 0) {
@@ -242,7 +245,8 @@
 
 				// Get rid of text if there are no labs available in an hour.
 				if (tempLength == occupiedRooms.length) {
-					document.getElementById("soon-hour").innerHTML = null;
+					let child = document.getElementById("soon-hour");
+					child.parentNode.removeChild(child);
 				}
 				if (occupiedRooms.length > 0) {
 					// Sort rooms by the start of the next free timeslot.
@@ -274,7 +278,7 @@
 				days[j] = new Day(timeslots);
 			}
 			let room = roomsJ[i];
-			rooms[i] = new Room(room.name, days, room.link);
+			rooms[i] = new Room(room.name, days, room.link, room.description);
 		}
 	}
 
@@ -286,9 +290,9 @@
 		let title = document.querySelector(".view h1");
 		let body = document.querySelector(".view p");
 		title.innerHTML = name;
-		
+		body.innerHTML = description;
 		list.style.opacity = 0;
-		list.style.pointerEvents = "none";
+		list.style.pointerEvents = "none";		
 		view.style.opacity = 1;
 	}
 
@@ -301,9 +305,26 @@
 		view.style.opacity = 0;
 	}
 
+	// Hide the view on clicking the X button
 	document.querySelector(".close").addEventListener("click", (event) => {
 		hideView();
 	});
+
+	// Hide the view on clicking outside
+	document.querySelector(".wrapper").addEventListener("transitionend", () => {
+		if(document.querySelector(".wrapper").style.opacity == 1){
+			document.querySelector("html").addEventListener("click", handleClick);
+		}else{
+			document.querySelector("html").removeEventListener("click", handleClick);
+		}
+	});	
+	
+	function handleClick(event){
+		if(!event.target.closest(".view")){
+			hideView();
+			document.querySelector("html").removeEventListener("click", handleClick);
+		}
+	}
 
 	occupiedRooms = [];
 
@@ -326,8 +347,8 @@
 	if (currentDay === 0 || currentDay === 6) {
 		addParagraph("list", "It's the weekend :P");
 	} else {
-		// Make a couple of Ajax requests to load data from a json file.	
-		let url = "https://dump.gabe.ws/labs.json"; // using a GitLab Pages "dump" to host this
+		// Make an Ajax request to load data from a local json file.	
+		let url = "labs.json"; 
 		var labRequest = new XMLHttpRequest();
 		labRequest.onreadystatechange = function () {
 			if (this.readyState == 4 && this.status == 200) {
@@ -335,24 +356,9 @@
 				var roomsJ = JSON.parse(this.responseText);
 				fillRooms(roomsJ);
 				doIt();
-
-				// Actually scroll to anchor
-				// var elem = document.getElementById((window.location.href).split('#')[1].replace("%20"," "));
-				// elem.scrollIntoView();
 			}
 		};
 		labRequest.open("GET", url, true);
 		labRequest.send();
 	}
-	// showView();
-
-	document.addEventListener('keydown', (event) => {
-		const keyName = event.key;
-	  
-		if (keyName === 'm') {
-		  // do not alert when only Control key is pressed.
-		  showView();
-		  return;
-		}
-	});  
 })();
