@@ -636,7 +636,7 @@
 			}
 			],
 		"link": "/labs/joyce211",
-		"description":"Like its cousin on the block, Joyce 201, this is a CS PC lab. Woo."
+		"description":"Like its cousin on the block, <span style='cursor:pointer;' onclick='document.body.click(); window.setTimeout(()=>document.getElementById(\"Joyce 201\").click(), 400)'>Joyce 201</span>, this is a CS PC lab. Woo."
 	},
 	{
 		"name": "Joyce 310",
@@ -1270,6 +1270,6 @@
 			}
 		],
 		"link": "/labs/ireland014",
-		"description":"Are the open Macs across the hall not doing it for you? Are you afraid of the number 12? You’ve come to the adequate place."
+		"description":"Are the open Macs across the hall not doing it for you? Are you afraid of the number <span style='cursor:pointer;' onclick='document.body.click(); window.setTimeout(()=>document.getElementById(\"Ireland 012\").click(), 400)'>12</span>? You’ve come to the adequate place."
 	}
 ]
