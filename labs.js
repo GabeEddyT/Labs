@@ -289,6 +289,9 @@
 		let list = document.querySelector("#list");
 		let title = document.querySelector(".view h1");
 		let body = document.querySelector(".view p");
+		let close = document.querySelector(".close");
+		
+		close.style.pointerEvents = "auto";
 		title.innerHTML = name;
 		body.innerHTML = description;
 		list.style.opacity = 0;
@@ -300,6 +303,9 @@
 	function hideView(){
 		let view = document.querySelector(".wrapper");
 		let list = document.querySelector("#list");
+		let close = document.querySelector(".close");
+
+		close.style.pointerEvents = "none";
 		list.style.opacity = 1;
 		list.style.pointerEvents = "auto";
 		view.style.opacity = 0;
