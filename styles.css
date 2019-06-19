@@ -1,10 +1,15 @@
-.openlist{
-    color: lightgreen;
-}
 
 #cur1{
     font-size: 1.25em;
     /* line-height: 0; */
+}
+
+#soon-15, #soon-hour, #eventually{
+    font-size: 1.25em;
+}
+
+.openlist{
+    color: lightgreen;
 }
 
 .soonlist{
@@ -21,7 +26,7 @@
 *{
     font-family: 'Lalezar';
     color: WHITESMOKE;
-    font-size: 20pt;
+    /* font-size: 20pt; */
     /* text-transform: uppercase; */
     /* position: absolute; */
     /* background-color: #1f1f1f; */
@@ -36,11 +41,12 @@ body{
     display: flex;
     /* z-index: 1; */
     height: 100%;
+    font-size: 24pt;
 }
 
 h1 {
     text-emphasis: none;
-    font-size: 2rem;
+    font-size: 4rem;
     margin: 0;
     padding: 0;
     padding-top: 1.5rem;
@@ -68,6 +74,7 @@ p {
     /* height: 100%; */
     /* border-radius: 25px; */
     position: fixed;
+    /* font-size: 4rem; */
 }
 
 .view{
@@ -89,6 +96,7 @@ p {
     height: 100%;
     position: relative;
     padding-bottom: 5%;
+    /* font-size: 2rem !important; */
 }
 
 .close{

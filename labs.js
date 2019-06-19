@@ -252,7 +252,7 @@
 					// Sort rooms by the start of the next free timeslot.
 					occupiedRooms.sort(function (a, b) { return compareTime(a.days[currentDay - 1].nextOpen(currentTime).start, b.days[currentDay - 1].nextOpen(currentTime).start) });
 
-					addParagraph("list", "These labs will be free... eventually:");
+					addParagraph("list", "These labs will be free... eventually:", "eventually");
 					checkSoon(currentTime, 2400, "closedlist");
 				}
 			}
