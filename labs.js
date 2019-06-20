@@ -324,6 +324,13 @@
 			document.querySelector("html").removeEventListener("click", handleClick);
 		}
 	});	
+
+	// Hide the view on hitting escape
+	window.onkeyup = (key) => {
+		if(key.keyCode === 27){
+			hideView();
+		}
+	}
 	
 	function handleClick(event){
 		if(!event.target.closest(".view")){
