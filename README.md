@@ -11,7 +11,7 @@ In the interest of making this easier to hand off to someone else, I decided to 
 
 ## Modifying the project
 
-Now, you *could* just edit files in your browser on Github.com and see the changes reflected shortly afterward. Assuming you'd rather see colorful text instead, I'd recommend using [Visual Studio Code](https://code.visualstudio.com/). "Building" the site doesn't require any dependencies other than a web browser, however, debugging will prove to be a challenge, because if you try to run the index.html file outright, you'll be greeted with
+Now, you *could* just edit files in your browser on Github.com and see the changes reflected shortly afterward. Assuming you'd rather see colorful text instead, I'd recommend using [Visual Studio Code](https://code.visualstudio.com/). “Building” the site doesn't require any dependencies other than a web browser, however, debugging will prove to be a challenge, because if you try to run the index.html file outright, you'll be greeted with
 
 ```bash
 Access to XMLHttpRequest at 'file:///[...]/labs.json' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https.
@@ -66,4 +66,10 @@ Now, let's say, this upcoming 11:15 class ends at 12:30 but runs back-to-back wi
                         "end": 2400,
                     }
 ``` 
-You'll notice, there isn't a `{"start":1230, "end":1245}` timeslot. This is by design. You *could* include said timelot without breaking anything, but when I first built this, I decided that I'd rather not bait myself—or anyone else—with only 15 minutes to work while people are entering/leaving a class. The smallest timeslots I include are half an hour long.
+You'll notice, there isn't a `{"start":1230, "end":1245}` timeslot. This is by design. You *could* include said timeslot without breaking anything, but when I first built this, I decided that I'd rather not bait myself—or anyone else—with only 15 minutes to work while people are entering/leaving a class. The smallest timeslots I include are half an hour long.
+
+In addition to timeslots, I also include my own personal commentary on the labs. And by “commentary”, I mean sarcastic remarks that I found funny enough after a couple of Seagram’s Escapes. I have these contained in “description” objects. So long as one includes proper escapes, these strings can contain any valid HTML. Which allows for quite the inline fun:
+
+>"description":"Like its cousin on the block, `<span style='cursor:pointer;' onclick='document.body.click(); window.setTimeout(()=>document.getElementById(\"Joyce 201\").click(), 400)'>`Joyce 201`</span>`, this is a CS PC lab. Woo."
+
+Which essentially makes the span-surrounded, “Joyce 201” act as a link, by simulating a click on the actual element it's referring to.
