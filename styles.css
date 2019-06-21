@@ -22,7 +22,7 @@
     /* position: absolute; */
 }
 
-p.openlist, .soonlist, .laterlist, .closedlist{
+p.openlist, p.soonlist, p.laterlist, p.closedlist{
     display: table;
 }
 
