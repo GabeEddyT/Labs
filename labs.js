@@ -95,11 +95,12 @@
 	// Members include the name, day-array, and a link, that a future Gabe will hopefully implement. Someday.
 	// Also fully-featured with helpful day-getters that are never used.
 	class Room {
-		constructor(name, days, link = false, description = false) {
+		constructor(name, days, link = false, description = false, tier = false) {
 			this.name = name;
 			this.days = days;
 			this.link = link;
 			this.description = description;
+			this.tier = tier;
 		}
 		get monday() {
 			return this.days[0];
@@ -118,7 +119,7 @@
 		}
 	}
 
-	// Function to help Gabe print pragraphs instead of typing all this stuff out each time.
+	// Function to help Gabe print paragraphs instead of typing all this stuff out each time.
 	// The divId (which I unambiguously named, "list", in the html) is where paragraph will be born.
 	// Specify pId to give your paragraph an id, and 
 	// subsequently start daisychaining these things.
@@ -173,7 +174,7 @@
 		for (let i = 0; i < rooms.length; i++) {
 			if (timeslot = rooms[i].days[(currentDay - 1)].isContained(time)) {
 				let para = addParagraph("list", rooms[i].name + " (" + timeslot.range + ") [", rooms[i].name, false, "text-align: center", "openlist");    
-				para.onclick = ()=>{showView(rooms[i].name, rooms[i].description)};
+				para.onclick = ()=>{showView(rooms[i].name, rooms[i].description, rooms[i].tier)};
 				para.style.cursor = "pointer";
 
 				// Highlight based on how much time is remaining       
@@ -201,8 +202,9 @@
 				if (compareTime(timeslot.start, time) <= howSoon) {					
 					let name = occupiedRooms[i].name;
 					let description = occupiedRooms[i].description;
+					let tier = occupiedRooms[i].tier;
 					let para = addParagraph("list", occupiedRooms[i].name + " (" + timeslot.range + ")  [" + compareTime(timeslot.start, time).toHours() + "]", occupiedRooms[i].name, false, "text-align: center", pClass);
-					para.addEventListener("click", ()=>{showView(name,description)});
+					para.addEventListener("click", ()=>{showView(name, description, tier)});
 					para.style.cursor = "pointer";				
 				} else {
 					remaining.push(occupiedRooms[i]);
@@ -278,19 +280,23 @@
 				days[j] = new Day(timeslots);
 			}
 			let room = roomsJ[i];
-			rooms[i] = new Room(room.name, days, room.link, room.description);
+			rooms[i] = new Room(room.name, days, room.link, room.description, room.tier);
 		}
 	}
 
 	// Fade in view with room name and description
 	// Fade out main site
-	function showView(name, description){
+	function showView(name, description, tier){
 		let view = document.querySelector(".wrapper");
 		let list = document.querySelector("#list");
+		let tierMain = document.querySelector(".tier");
+		let tierExtra = document.querySelector(".tier span span");
 		let title = document.querySelector(".view h1");
 		let body = document.querySelector(".view p");
 		let close = document.querySelector(".close");
 
+		tierMain.childNodes[0].nodeValue = tier.main;
+		tierExtra.textContent = tier.extra;
 		close.style.pointerEvents = "auto";
 		title.innerHTML = name;
 		body.innerHTML = description;
@@ -324,6 +330,14 @@
 			document.querySelector("html").removeEventListener("click", handleClick);
 		}
 	});	
+
+	const showExtra = () => document.querySelector(".tier span span").style.left == "-100%";
+
+	document.querySelector(".tier").onclick = () => {document.querySelector(".tier span span").style.left = showExtra() ? "0%" : "-100%"; if (!showExtra()) document.querySelector(".tier span").style.width = "auto"};
+
+	document.querySelector(".tier").addEventListener("transitionend", () =>{
+		document.querySelector(".tier span").style.width = showExtra() ? "0" : "auto";
+	});
 
 	// Hide the view on hitting escape
 	window.onkeyup = (key) => {
