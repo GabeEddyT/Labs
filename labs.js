@@ -92,7 +92,7 @@
 	}
 
 	// The Room, the meat of this project. © Tommy Wiseau.
-	// Members include the name, day-array, and a link, that a future Gabe will hopefully implement. Someday.
+	// Members include the name, day-array, and a link, that a future Gabe has deprecated.
 	// Also fully-featured with helpful day-getters that are never used.
 	class Room {
 		constructor(name, days, link = false, description = false, tier = false) {

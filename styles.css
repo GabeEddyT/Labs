@@ -97,6 +97,7 @@ p {
     cursor: pointer;
     transition: background-color .4s;
     z-index: 1;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .close:hover{
@@ -117,6 +118,7 @@ p {
     transition: background-color .4s;
     font-size: .9em;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 i{
