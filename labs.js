@@ -374,7 +374,7 @@
 	}
 
 	if (currentDay === 0 || currentDay === 6) {
-		addParagraph("list", "It's the weekend :P");
+		addParagraph("list", "It’s the weekend :P");
 	} else {
 		// Make an Ajax request to load data from a local json file.	
 		let url = "labs.json"; 
