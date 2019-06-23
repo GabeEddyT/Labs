@@ -295,8 +295,10 @@
 		let body = document.querySelector(".view p");
 		let close = document.querySelector(".close");
 
-		tierMain.childNodes[0].nodeValue = tier.main;
-		tierExtra.textContent = tier.extra;
+		// tierMain.childNodes[0].nodeValue = tier.main;
+		tierExtra.innerHTML = tier.extra;
+		tierMain.innerHTML = tier.main;
+		tierMain.appendChild(tierExtra.parentNode);
 		close.style.pointerEvents = "auto";
 		title.innerHTML = name;
 		body.innerHTML = description;

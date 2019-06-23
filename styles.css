@@ -29,6 +29,10 @@ p.openlist, p.soonlist, p.laterlist, p.closedlist{
     color: WHITESMOKE;
 }
 
+symbol{
+    font-family: 'Symbola';
+}
+
 body{
     background-color: #1f1f1f;
     position: relative;
@@ -113,12 +117,24 @@ p {
     transition: background-color .4s;
 }
 
+i{
+    padding-top: 5px;    
+}
+
 .tier span{
     float: right;
     position: relative;    
     overflow: hidden;      
     transition: left .5s;
-    
+    /* font-size: 1em;  */
+}
+
+.tier > span{
+    margin-left: 1rem;
+}
+
+emoji{
+    float: none;
 }
 
 #list{    

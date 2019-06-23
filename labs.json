@@ -78,8 +78,8 @@
 		],
 		"description":"Home to works of art—or works of shame and self-deprecation, depending on your outlook. Residing in the basement of CCM, this art lab has dual-monitors, art programs pre-installed, and machines good enough to run them; when they’re in the mood. Some say you can hear the cries of stressed game artists from the fourth floor, which would make sense, because there’s a stairwell next to the damn room. ",
 		"tier":{
-			"main":"🌟",
-			"extra":"; 2x 🖥️, GTX 970"
+			"main":"<i class='fab fa-artstation fa-lg'></i>",
+			"extra":"2x 🖥️, GTX 970"
 		}
 	},
 	{
@@ -161,8 +161,8 @@
 		],
 		"description":"The primary domain of Quality Assurance and Cody’s <em>former</em> home. Only one monitor here, but (on paper, at least) these are some of the best computers Champlain has.",
 		"tier":{
-			"main":"🌟",
-			"extra":"; 1x 🖥️ 4K, GTX 1080"
+			"main":"<i class='fab fa-artstation fa-lg'></i>",			
+			"extra":"1x 🖥️<symbol>🆞</symbol>, GTX 1080"
 		}
 	},
 	{
@@ -248,8 +248,8 @@
 		],
 		"description": "Taking a look at the spec sheet, one would assume that these computers are great, and fast, and always run perfectly fine. When designers touch them, however, these PCs tend to prove the opposite. As the secondary home for QA, it’ll be occupied from 5:30–7:30 on Mondays, Thursdays, and Saturdays. Other than that, this lab has a pretty open schedule.",
 		"tier": {
-			"main":"⭐",
-			"extra":"; 1x 🖥️, GTX 1070"
+			"main":"<i class='fab fa-artstation fa-lg'></i>",
+			"extra":"1x 🖥️, GTX 1070"
 		}
 	},
 	{
@@ -331,8 +331,8 @@
 		],
 		"description":"A Mac lab at the precipice of CCM. They have a tendency to start flashing randomly, subsequently refusing to be functional. But at a mere $2,299 a piece, can you really complain?",
 		"tier":{
-			"main":"🍏",
-			"extra":"; Mac, 1x 🖥️ 5K, R9 380"
+			"main":"<i class='fab fa-apple fa-lg'></i>",
+			"extra":"Mac, 1x 🖥️<symbol>🆞</symbol>, R9 380"
 		}
 
 	},
@@ -415,8 +415,8 @@
 		],
 		"description":"Home to all sorts of fun and enlightening classes such as Game Architecture, Game AI, and Graphics of all kinds. Programs that you’ll probably need will not be installed by default, but at least there are dual-monitors; and most of them aren’t horrible. To the outside world, the writing on the wall may look like archaic inscriptions of a defunct language. To the programmers frantically scribbling them to solve graphics problems, they make even less sense.",
 		"tier": {
-			"main":"🌟",
-			"extra":"; 2x 🖥️, GTX 1080"
+			"main":"<i class='fab fa-artstation fa-lg'></i>",
+			"extra":"2x 🖥️, GTX 1080"
 		}
 	},
 	{
@@ -494,8 +494,8 @@
 		],
 		"description":"A CS PC lab. Since Computer Science majors <em>clearly</em> don’t care for performant parts, why bother? These machines are equipped with GT 210s, and roar at the sight of any modern webpage.",
 		"tier":{
-			"main":"👩‍💻",
-			"extra":"; 1x 🖥️, GT 210"
+			"main":"<i class='fab fa-stack-overflow fa-lg'></i>",
+			"extra":"1x 🖥️, GT 210"
 		}
 	},
 	{
@@ -569,8 +569,8 @@
 		],
 		"description":"A CS lab filled with Macs that serve the hallowed purpose of emulating your favorite Linux distribution.",
 		"tier":{
-			"main":"🍏",
-			"extra":"; Mac, 1x 🖥️ 5K, R9 380"
+			"main":"<i class='fab fa-apple fa-lg'></i>",
+			"extra":"Mac, 1x 🖥️<symbol>🆞</symbol>, R9 380"
 		}
 	},
 	{
@@ -660,8 +660,8 @@
 			],
 		"description":"Like its cousin on the block, <span style='cursor:pointer;' onclick='document.body.click(); window.setTimeout(()=>document.getElementById(\"Joyce 201\").click(), 400)'>Joyce 201</span>, this is a CS PC lab. Woo.",
 		"tier":{
-			"main":"👩‍💻",
-			"extra":"; 1x 🖥️, GT 210"
+			"main":"<i class='fab fa-stack-overflow fa-lg'></i>",
+			"extra":"1x ️🖥️, GT 210"
 		}
 	},
 	{
@@ -739,7 +739,7 @@
 		],
 		"description":"A mysterious lab at the top of Joyce. I can’t comment on it personally, since I don’t have access to it. And after making this site, I doubt I ever will.",
 		"tier":{
-			"main":"🤷‍♀️",
+			"main":"<i class='fab fa-stack-overflow fa-lg'></i>",
 			"extra":""
 		}
 	},
@@ -827,8 +827,8 @@
 		"link": "/labs/mic308",
 		"description":"You climbed all those steps to the top floor of this library and your reward is... <em>this</em>? <br/ ><br/ > I had a more witty description here, but Champlain has since replaced the old laptops with big boxes armed with the same performance.",
 		"tier":{
-			"main":"👩‍💻",
-			"extra":"; 1x 🖥️, GT 210"
+			"main":"<i class='fab fa-stack-overflow fa-lg'></i>",
+			"extra":"1x 🖥️, GT 210"
 		}
 	},
 	{
@@ -906,8 +906,8 @@
 		],
 		"description":"Home to many grunge and vaporwave-filled gaming sessions, and occasionally, work. For either task, the innards of these computers will suffice, so long as you have enough space for your repo, and don’t mind the single—albeit huge and 4K—screen life.",
 		"tier":{
-			"main":"🌟",
-			"extra":"; 1x 🖥️ 4K, GTX 1080"
+			"main":"<i class='fab fa-artstation fa-lg'></i>",
+			"extra":"1x 🖥️<symbol>🆞</symbol>, GTX 1080"
 		}
 	},
 	{
@@ -981,8 +981,8 @@
 		],
 		"description": "A Digital Forensics lab by day... actually, that’s pretty much all it’s good for. Move along, now.",
 		"tier":{
-			"main":"👩‍💻",
-			"extra":"; 1x 🖥️, GT 210"
+			"main":"<i class='fab fa-stack-overflow fa-lg'></i>",
+			"extra":"1x 🖥️, GT 210"
 		}
 	},
 	{
@@ -1064,8 +1064,8 @@
 		],
 		"description":"I’m sure it’s music to <em>someone’s</em> ears.",
 		"tier":{
-			"main":"🍏",
-			"extra":"; Mac, 1x 🖥️ 5K, R9 380"
+			"main":"<i class='fab fa-apple fa-lg'></i>",
+			"extra":"Mac, 1x 🖥️<symbol>🆞</symbol>, R9 380"
 		}
 	},
 	{
@@ -1147,8 +1147,8 @@
 		],
 		"description":"Made specifically for Cyber Security. Or Networking. Beats me.",
 		"tier":{
-			"main":"👩‍💻",
-			"extra":"; 1x 🖥️, GT 210"
+			"main":"<i class='fab fa-stack-overflow fa-lg'></i>",
+			"extra":"1x 🖥️, GT 210"
 		}
 	},
 	{
@@ -1230,8 +1230,8 @@
 		],
 		"description":"There are Macs in the basement of Ireland?",
 		"tier":{
-			"main":"🍏",
-			"extra":"; Mac, 1x 🖥️ 5K, RX 580"
+			"main":"<i class='fab fa-apple fa-lg'></i>",
+			"extra":"Mac, 1x 🖥️<symbol>🆞</symbol>, RX 580"
 		}
 	},
 	{
@@ -1321,8 +1321,8 @@
 		],
 		"description":"Are the open Macs across the hall not doing it for you? Are you afraid of the number <span style='cursor:pointer;' onclick='document.body.click(); window.setTimeout(()=>document.getElementById(\"Ireland 012\").click(), 400)'>12</span>? You’ve come to the adequate place.",
 		"tier":{
-			"main":"🍏",
-			"extra":"; Mac, 1x 🖥️ 5K, RX 580"
+			"main":"<i class='fab fa-apple fa-lg'></i>",
+			"extra":"Mac, 1x 🖥️<symbol>🆞</symbol>, RX 580"
 		}
 	}
 ]
