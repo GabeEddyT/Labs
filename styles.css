@@ -126,15 +126,10 @@ i{
     position: relative;    
     overflow: hidden;      
     transition: left .5s;
-    /* font-size: 1em;  */
 }
 
 .tier > span{
     margin-left: 1rem;
-}
-
-emoji{
-    float: none;
 }
 
 #list{    
