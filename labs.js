@@ -217,20 +217,20 @@
 	// Driver. Putting the meat of the script in here for an Ajax request.
 	function doIt() {
 		addParagraph("list", "For the current time, " +
-			currentTime.asTime() + ", the following labs are free:", "cur1");
+			currentTime.asTime() + ", the following labs are free:", "current");
 		checkRooms(currentTime);
 
 		// Change text if there are no open rooms.
 		if (occupiedRooms.length == rooms.length) {
-			document.getElementById("cur1").innerHTML = "For the current time, " +
+			document.getElementById("current").innerHTML = "For the current time, " +
 				currentTime.asTime() + ", no labs are open.";
 		}
 
-		addParagraph("cur1", '†', false, false, false, false, "sup");
+		addParagraph("current", '†', false, false, false, false, "sup");
 
 		// List occupiedRooms soon to be open.
 		if (occupiedRooms.length > 0) {
-			addParagraph("list", "These labs will be free soon (<15 minutes):", "soon-15");
+			addParagraph("list", "These labs will be free soon:", "soon-15");
 			let tempLength = occupiedRooms.length;
 			occupiedRooms = checkSoon(currentTime, 15, "soonlist");
 
@@ -262,10 +262,10 @@
 
 		// Add dagger footnote.
 		addParagraph("list", "", false, false, false, false, "br");
-		addParagraph("list", "", "cur1.5");
-		addParagraph("cur1.5", '†', false, false, false, false, "sup");
-		document.getElementById("cur1.5").innerHTML += "(open period indicated in parentheses)";
-		addParagraph("list", "[time left in period, or time left until a new one begins, indicated in braces]", "cur3");
+		addParagraph("list", "", "footnote1");
+		addParagraph("footnote1", '†', false, false, false, false, "sup");
+		document.getElementById("footnote1").innerHTML += "(open period indicated in parentheses)";
+		addParagraph("list", "[time left in period, or time left until a new one begins, indicated in braces]", "footnote2");
 	}
 
 	function fillRooms(roomsJ) {
@@ -289,16 +289,14 @@
 	function showView(name, description, tier){
 		let view = document.querySelector(".wrapper");
 		let list = document.querySelector("#list");
-		let tierMain = document.querySelector(".tier");
-		let tierExtra = document.querySelector(".tier span span");
+		let tierMain = document.querySelector("#tier-main");
+		let tierExtra = document.querySelector("#tier-extra");
 		let title = document.querySelector(".view h1");
 		let body = document.querySelector(".view p");
 		let close = document.querySelector(".close");
-
-		// tierMain.childNodes[0].nodeValue = tier.main;
+		
 		tierExtra.innerHTML = tier.extra;
-		tierMain.innerHTML = tier.main;
-		tierMain.appendChild(tierExtra.parentNode);
+		tierMain.innerHTML = tier.main;		
 		close.style.pointerEvents = "auto";
 		title.innerHTML = name;
 		body.innerHTML = description;
@@ -333,12 +331,21 @@
 		}
 	});	
 
-	const showExtra = () => document.querySelector(".tier span span").style.left == "-100%";
+	const showExtra = () => document.getElementById("tier-extra").style.left == "-100%";
 
-	document.querySelector(".tier").onclick = () => {document.querySelector(".tier span span").style.left = showExtra() ? "0%" : "-100%"; if (!showExtra()) document.querySelector(".tier span").style.width = "auto"};
+	document.querySelector(".tier").onclick = () => {
+		document.getElementById("tier-extra").style.left = showExtra() ? "0%" : "-100%"; 
+		if (!showExtra()) {
+			document.querySelector("#tier-container").style.width = "auto";
+			document.querySelector("#tier-main").style.transform = "rotate(-360deg)";
+		}else{
+			let icon = document.querySelector("#tier-main");
+			icon.style.transform = "rotate(0deg)";	
+		}
+	};
 
 	document.querySelector(".tier").addEventListener("transitionend", () =>{
-		document.querySelector(".tier span").style.width = showExtra() ? "0" : "auto";
+		document.querySelector("#tier-container").style.width = showExtra() ? "0" : "auto";
 	});
 
 	// Hide the view on hitting escape
