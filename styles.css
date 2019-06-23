@@ -59,7 +59,7 @@ p {
 
 .wrapper{
     padding-top: 50px;
-    width: 80%;
+    width: 90%;
     max-width: 1280px;
     opacity: 0;
     transition: opacity .4s;
@@ -115,6 +115,7 @@ p {
     position: absolute;
     cursor: pointer;
     transition: background-color .4s;
+    font-size: .9em;
 }
 
 i{
