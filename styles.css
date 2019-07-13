@@ -25,12 +25,8 @@ p.openlist, p.soonlist, p.laterlist, p.closedlist{
 }
 
 *{
-    font-family: 'OrkneyMedium', sans-serif;
+    font-family: 'Orkney Medium', sans-serif;
     color: WHITESMOKE;
-}
-
-symbol{
-    font-family: 'Symbola';
 }
 
 body{
@@ -45,7 +41,7 @@ body{
 }
 
 h1 {
-    font-family: 'OrkneyMediumItalic';
+    font-family: 'Orkney Medium Italic';
     font-size: 4rem;
     margin: 0;
     padding: 0;

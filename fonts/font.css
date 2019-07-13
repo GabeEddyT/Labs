@@ -1,0 +1,11 @@
+@font-face{
+    font-family: "Orkney Medium";
+    src: url("Orkney Medium.woff2") format("woff2"),
+         url("Orkney Medium.woff") format("woff");
+}
+
+@font-face{
+    font-family: "Orkney Medium Italic";
+    src: url("Orkney Medium Italic.woff2") format("woff2"),
+         url("Orkney Medium Italic.woff") format("woff");
+}
