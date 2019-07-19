@@ -172,6 +172,7 @@
 	// Populate occupiedRooms with the remaining rooms.
 	function checkRooms(time = getCurrentTime()) {
 		for (let i = 0; i < rooms.length; i++) {
+			let timeslot;
 			if (timeslot = rooms[i].days[(currentDay - 1)].isContained(time)) {
 				let para = addParagraph("list", rooms[i].name + " (" + timeslot.range + ") [", rooms[i].name, false, "text-align: center", "openlist");    
 				para.onclick = ()=>{showView(rooms[i].name, rooms[i].description, rooms[i].tier)};
@@ -198,6 +199,7 @@
 	function checkSoon(time = getCurrentTime(), howSoon = 15, pClass) {
 		let remaining = [];
 		for (let i = 0; i < occupiedRooms.length; i++) {
+			let timeslot;
 			if (timeslot = occupiedRooms[i].days[(currentDay - 1)].nextOpen(time)) {
 				if (compareTime(timeslot.start, time) <= howSoon) {					
 					let name = occupiedRooms[i].name;
@@ -362,34 +364,26 @@
 		}
 	}
 
-	occupiedRooms = [];
-
-	let d = new Date();
+	let occupiedRooms = [];
 
 	// Let custom day be assigned in querystring.
-	if ((aDay = parseInt(getQueryString('day'), 10)) && aDay >= 0 && aDay <= 6 || aDay == 0) {
-		var currentDay = aDay;
-	} else {
-		var currentDay = (d).getDay();	
-	}
+	let aDay = parseInt(getQueryString('day'), 10);
+	let currentDay = aDay >= 0 && aDay <= 6 ? aDay : (new Date()).getDay();
 
 	// Let custom time be assigned in querystring.
-	if ((aTime = parseInt(getQueryString('time'), 10)) && aTime >= 0 && aTime < 2400 && aTime % 100 < 60) {
-		var currentTime = aTime;
-	} else {
-		var currentTime = getCurrentTime();
-	}
+	let aTime = parseInt(getQueryString('time'), 10);
+	let currentTime = aTime >= 0 && aTime < 2400 && aTime % 100 < 60 ? aTime : getCurrentTime();
 
 	if (currentDay === 0 || currentDay === 6) {
 		addParagraph("list", "It’s the weekend :P");
 	} else {
 		// Make an Ajax request to load data from a local json file.	
 		let url = "labs.json"; 
-		var labRequest = new XMLHttpRequest();
+		let labRequest = new XMLHttpRequest();
+		var rooms = []; // yes, it's (less) global 
 		labRequest.onreadystatechange = function () {
 			if (this.readyState == 4 && this.status == 200) {
-				rooms = []; // yes, it's global 
-				var roomsJ = JSON.parse(this.responseText);
+				let roomsJ = JSON.parse(this.responseText);
 				fillRooms(roomsJ);
 				doIt();
 			}
