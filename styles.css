@@ -24,9 +24,14 @@ p.openlist, p.soonlist, p.laterlist, p.closedlist{
     display: table;
 }
 
+.github-corner{
+    color: whitesmoke;
+    fill:#2f2f2f; 
+}
+
 body{
-    font-family: 'Orkney Medium', sans-serif;
     color: WHITESMOKE;
+    font-family: 'Orkney Medium', sans-serif;
     background-color: #1f1f1f;
     position: relative;
     flex-direction: column;
