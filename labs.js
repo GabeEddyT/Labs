@@ -1,21 +1,27 @@
 (() => {
+	// jQuery-imitating alias for document.querySelector to condense code a bit.
+	const $ = document.querySelector.bind(document);
+	$.class = (query) => document.getElementsByClassName(query)[0];
+	$.id = document.getElementById.bind(document);
+	$.tag = (query) => document.getElementsByTagName(query)[0];
+
 	// Represent a number (that has a military time value) as a standard time string.	
 	Number.prototype.asTime = function () {
 		this.time = this % 2400; // Hack to allow earlier later values... that made more sense in my head
 		if (this.time < 100) {
-			return "12:" + (this.time.valueOf() + "").padStart(2, "0") + "AM";
+			return "12:" + (this.time.valueOf() + "").padStart(2, "0") + " AM";
 		} else if (this.time == 2400) {
-			return "12:00AM";
+			return "12:00 AM";
 		} else if (this.time >= 1300) {
 			let num = this.time.valueOf();
 			num = num - 1200;
-			let time = Math.trunc(num / 100) + ":" + (num % 100 + "").padStart(2, "0") + "PM";
+			let time = Math.trunc(num / 100) + ":" + (num % 100 + "").padStart(2, "0") + " PM";
 			return time;
 		} else if (this.time >= 1200) {
-			return "12:" + (this.time % 100 + "").padStart(2, "0") + "PM";
+			return "12:" + (this.time % 100 + "").padStart(2, "0") + " PM";
 		} else {
 			let num = this.time.valueOf();
-			return Math.trunc(num / 100) + ":" + (num % 100 + "").padStart(2, "0") + "AM";
+			return Math.trunc(num / 100) + ":" + (num % 100 + "").padStart(2, "0") + " AM";
 		}
 	}
 
@@ -147,13 +153,9 @@
 		return div.appendChild(para);
 	}
 
-	// https://gomakethings.com/how-to-get-the-value-of-a-querystring-with-native-javascript/
 	// Grab a query string.
-	function getQueryString(field, url) {
-		var href = url ? url : window.location.href;
-		var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
-		var str = reg.exec(href);
-		return str ? str[1] : null;
+	function getQueryString(field) {
+		return new URLSearchParams(document.location.search).get(field);
 	};
 
 	// Compare time by converting to minutes.
@@ -205,7 +207,7 @@
 					let name = occupiedRooms[i].name;
 					let description = occupiedRooms[i].description;
 					let tier = occupiedRooms[i].tier;
-					let para = addParagraph("list", occupiedRooms[i].name + " (" + timeslot.range + ")  [" + compareTime(timeslot.start, time).toHours() + "]", occupiedRooms[i].name, false, "text-align: center", pClass);
+					let para = addParagraph("list", `${occupiedRooms[i].name} (${timeslot.range}) [${compareTime(timeslot.start, time).toHours()}]`, occupiedRooms[i].name, false, "text-align: center", pClass);
 					para.addEventListener("click", ()=>{showView(name, description, tier)});
 					para.style.cursor = "pointer";				
 				} else {
@@ -241,7 +243,7 @@
 				let child = document.getElementById("soon-15");
 				child.parentNode.removeChild(child);
 			}
-			// List rooms avaiable in an hour.
+			// List rooms available in an hour.
 			if (occupiedRooms.length > 0) {
 				addParagraph("list", "These labs will be free in an hour or less:", "soon-hour");
 				let tempLength = occupiedRooms.length;
@@ -289,13 +291,13 @@
 	// Fade in view with room name and description
 	// Fade out main site
 	function showView(name, description, tier){
-		let view = document.querySelector(".wrapper");
-		let list = document.querySelector("#list");
-		let tierMain = document.querySelector("#tier-main");
-		let tierExtra = document.querySelector("#tier-extra");
-		let title = document.querySelector(".view h1");
-		let body = document.querySelector(".view p");
-		let close = document.querySelector(".close");
+		const view = $.class("wrapper");
+		const list = $.id("list");
+		const tierMain = $.id("tier-main");
+		const tierExtra = $.id("tier-extra");
+		const title = $(".view h1");
+		const body = $(".view p");
+		const close = $.class("close");
 		
 		tierExtra.innerHTML = tier.extra;
 		tierMain.innerHTML = tier.main;		
@@ -309,9 +311,9 @@
 
 	// Fade out view and fade in main site
 	function hideView(){
-		let view = document.querySelector(".wrapper");
-		let list = document.querySelector("#list");
-		let close = document.querySelector(".close");
+		const view = $.class("wrapper");
+		const list = $.id("list");
+		const close = $.class("close");
 
 		close.style.pointerEvents = "none";
 		list.style.opacity = 1;
@@ -320,34 +322,34 @@
 	}
 
 	// Hide the view on clicking the X button
-	document.querySelector(".close").addEventListener("click", (event) => {
+	$.class("close").addEventListener("click", () => {
 		hideView();
 	});
 
 	// Hide the view on clicking outside
-	document.querySelector(".wrapper").addEventListener("transitionend", () => {
-		if(document.querySelector(".wrapper").style.opacity == 1){
-			document.querySelector("html").addEventListener("click", handleClick);
+	$.class("wrapper").addEventListener("transitionend", () => {
+		if($.class("wrapper").style.opacity == 1){
+			$.tag("html").addEventListener("click", handleClick);
 		}else{
-			document.querySelector("html").removeEventListener("click", handleClick);
+			$.tag("html").removeEventListener("click", handleClick); 
 		}
 	});	
 
-	const showExtra = () => document.getElementById("tier-extra").style.left == "-100%";
+	const showExtra = () => $.id("tier-extra").style.left == "-100%";
 
-	document.querySelector(".tier").onclick = () => {
-		document.getElementById("tier-extra").style.left = showExtra() ? "0%" : "-100%"; 
+	$.class("tier").onclick = () => {
+		$.id("tier-extra").style.left = showExtra() ? "0%" : "-100%"; 
 		if (!showExtra()) {
-			document.querySelector("#tier-container").style.width = "auto";
-			document.querySelector("#tier-main").style.transform = "rotate(-360deg)";
+			$.id("tier-container").style.width = "auto";
+			$.id("tier-main").style.transform = "rotate(-360deg)";
 		}else{
-			let icon = document.querySelector("#tier-main");
+			let icon = $.id("tier-main");
 			icon.style.transform = "rotate(0deg)";	
 		}
 	};
 
-	document.querySelector(".tier").addEventListener("transitionend", () =>{
-		document.querySelector("#tier-container").style.width = showExtra() ? "0" : "auto";
+	$.class("tier").addEventListener("transitionend", () =>{
+		$.id("tier-container").style.width = showExtra() ? "0" : "auto";
 	});
 
 	// Hide the view on hitting escape
@@ -360,7 +362,7 @@
 	function handleClick(event){
 		if(!event.target.closest(".view")){
 			hideView();
-			document.querySelector("html").removeEventListener("click", handleClick);
+			$.tag("html").removeEventListener("click", handleClick);
 		}
 	}
 

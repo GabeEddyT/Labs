@@ -136,14 +136,6 @@ p {
     font-size: 28pt;
 }
 
-.tier:hover{
-    /* font-size: .95em; */
-}
-
-i{
-    /* padding-top: 5px;     */
-}
-
 #tier-extra, #tier-container{
     padding-top: .15em;
     float: right;
