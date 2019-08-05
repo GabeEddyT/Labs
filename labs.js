@@ -385,10 +385,17 @@
 	const dayMap = ["monday", "tuesday", "wednesday", "thursday", "friday"];
 
 	// Let custom day be assigned in querystring.
-	const dayQuery = getQueryString('day') || "";
-	let aDay = parseInt(dayQuery, 10) || dayMap.indexOf(dayQuery.toLowerCase()) + 1;
+	const dayQuery = getQueryString('day');
+	let aDay;
 	
+	try{
+		aDay = parseInt(dayQuery, 10) || dayMap.indexOf(dayQuery.toLowerCase()) + 1;
+	}catch{
+		aDay = NaN;
+	}
+
 	let currentDay = aDay >= 0 && aDay <= 6 ? aDay : (new Date()).getDay();
+	console.log((new Date()).getDay());
 
 	// Let custom time be assigned in querystring.
 	const timeQuery = getQueryString('time') || "";
