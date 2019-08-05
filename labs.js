@@ -385,18 +385,12 @@
 	const dayMap = ["monday", "tuesday", "wednesday", "thursday", "friday"];
 
 	// Let custom day be assigned in querystring.
-	const dayQuery = getQueryString('day');
-	let aDay;
+	const dayQuery = getQueryString('day') || NaN; // using NaN here, because *apparently* null >= 0 is true.
 	
-	try{
-		aDay = parseInt(dayQuery, 10) || dayMap.indexOf(dayQuery.toLowerCase()) + 1;
-	}catch{
-		aDay = NaN;
-	}
+	const aDay = dayQuery && (parseInt(dayQuery, 10) || dayMap.indexOf(dayQuery.toLowerCase()) + 1);
 
-	let currentDay = aDay >= 0 && aDay <= 6 ? aDay : (new Date()).getDay();
-	console.log((new Date()).getDay());
-
+	const currentDay = aDay >= 0 && aDay <= 6 ? aDay : (new Date()).getDay();
+	
 	// Let custom time be assigned in querystring.
 	const timeQuery = getQueryString('time') || "";
 	let aTime = timeQuery.includes(":") ? timeQuery.toMilitary() : parseInt(timeQuery, 10);
