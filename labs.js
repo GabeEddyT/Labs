@@ -45,7 +45,14 @@
 	String.prototype.toMilitary = function () {
 		const parts = this.split(":");
 		let time = parseInt(parts[0] + parts[1], 10);
-		if (this.includes("PM")) time += 1200;
+		
+		if (parts[0] == "12"){ 
+			if(this.toUpperCase().includes("AM")){
+				time -= 1200;
+			}
+		}else if (this.toUpperCase().includes("PM")) {
+			time += 1200;
+		}
 		return time;
 	}
 
