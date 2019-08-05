@@ -29,6 +29,19 @@ p.openlist, p.soonlist, p.laterlist, p.closedlist{
     fill:#2f2f2f; 
 }
 
+a, a:visited{
+    text-decoration-style: dotted;
+    color: whitesmoke;
+    transition: text-decoration-color .2s;
+    text-decoration-line: underline;
+    cursor:pointer;
+    white-space: nowrap;
+}
+
+a:hover{
+    text-decoration-color: transparent;
+}
+
 body{
     color: WHITESMOKE;
     font-family: 'Orkney Medium', sans-serif;
@@ -154,4 +167,8 @@ p {
     transition: opacity .4s;
     z-index: 1;
     margin: 8px;
+}
+
+.capitalized{
+    text-transform: capitalize;
 }

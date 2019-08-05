@@ -658,7 +658,7 @@
 				]
 			}
 			],
-		"description":"Like its cousin on the block, <span style='cursor:pointer;' onclick='document.body.click(); window.setTimeout(()=>document.getElementById(\"Joyce 201\").click(), 400)'>Joyce 201</span>, this is a CS PC lab. Woo.",
+		"description":"Like its cousin on the block, <a onclick='document.body.click(); window.setTimeout(()=>document.getElementById(\"Joyce 201\").click(), 400)'>Joyce 201</a>, this is a CS PC lab. Woo.",
 		"tier":{
 			"main":"<i class='mdi mdi-stack-overflow'></i>",
 			"extra":"<i class='mdi mdi-monitor'></i> GT 210 <i class='mdi mdi-star-half'></i><i class='mdi mdi-star-outline'></i><i class='mdi mdi-star-outline'></i>"
@@ -1319,7 +1319,7 @@
 				]
 			}
 		],
-		"description":"Are the open Macs across the hall not doing it for you? Are you afraid of the number <span style='cursor:pointer;' onclick='document.body.click(); window.setTimeout(()=>document.getElementById(\"Ireland 012\").click(), 400)'>12</span>? You’ve come to the adequate place.",
+		"description":"Are the open Macs across the hall not doing it for you? Are you afraid of the number <a onclick='document.body.click(); window.setTimeout(()=>document.getElementById(\"Ireland 012\").click(), 400)'>12</a>? You’ve come to the adequate place.",
 		"tier":{
 			"main":"<i class='mdi mdi-apple'></i>",
 			"extra":"<i class='mdi mdi-desktop-mac'></i><i class='mdi mdi-video-4k-box'></i> RX 580 <i class='mdi mdi-star'></i><i class='mdi mdi-star-outline'></i><i class='mdi mdi-star-outline'></i>"

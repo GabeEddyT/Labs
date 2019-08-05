@@ -41,6 +41,14 @@
 		return (h ? (h + "h ") : "") + this % 60 + "m";
 	}
 
+	// Convert String to military time Number.
+	String.prototype.toMilitary = function () {
+		const parts = this.split(":");
+		let time = parseInt(parts[0] + parts[1], 10);
+		if (this.includes("PM")) time += 1200;
+		return time;
+	}
+
 	// The venerable Timeslot, with its start and end time.
 	// Graceful in its place of subverting the two-dimensional array.
 	class Timeslot {
@@ -131,19 +139,17 @@
 	// subsequently start daisychaining these things.
 	// Specify style and class to add values to those tags.
 	// Oh, and I put in the option to not print out a paragraph at all, and use a different tag.
-	function addParagraph(divId, text, pId, href, style, pClass, tag = "p") {
+	function addParagraph(divId, content, pId, href, style, pClass, tag = "p") {
 		let para = document.createElement(tag);
-		let textNode = document.createTextNode(text);
-
 		if (href) {
 			var link = document.createElement("a");
-			link.appendChild(textNode);		
-			// link.href = href;
+			link.innerHTML = content;
+			link.href = href;
 			pClass ? link.className = pClass : null;
 			pId ? link.id = pId + "-link" : null;
 			para.appendChild(link);
 		} else {
-			para.appendChild(textNode);
+			para.innerHTML = content;
 		}
 		
 		pId ? para.id = pId : null;
@@ -220,14 +226,14 @@
 
 	// Driver. Putting the meat of the script in here for an Ajax request.
 	function doIt() {
-		addParagraph("list", "For the current time, " +
-			currentTime.asTime() + ", the following labs are free:", "current");
+		const capitalizedDay = `<span class="capitalized">${dayMap[currentDay - 1]}</span>`;
+		addParagraph("list", `On ${capitalizedDay}s at ${currentTime.asTime()}, the following labs are free:`, "current");
 		checkRooms(currentTime);
 
 		// Change text if there are no open rooms.
 		if (occupiedRooms.length == rooms.length) {
-			document.getElementById("current").innerHTML = "For the current time, " +
-				currentTime.asTime() + ", no labs are open.";
+			document.getElementById("current").innerHTML = 
+				`No labs are open on ${capitalizedDay}s at ${currentTime.asTime()}.`;
 		}
 
 		addParagraph("current", '†', false, false, false, false, "sup");
@@ -368,16 +374,23 @@
 
 	let occupiedRooms = [];
 
+	// Map for getting number values of days (-1).	
+	const dayMap = ["monday", "tuesday", "wednesday", "thursday", "friday"];
+
 	// Let custom day be assigned in querystring.
-	let aDay = parseInt(getQueryString('day'), 10);
+	const dayQuery = getQueryString('day') || "";
+	let aDay = parseInt(dayQuery, 10) || dayMap.indexOf(dayQuery.toLowerCase()) + 1;
+	
 	let currentDay = aDay >= 0 && aDay <= 6 ? aDay : (new Date()).getDay();
 
 	// Let custom time be assigned in querystring.
-	let aTime = parseInt(getQueryString('time'), 10);
+	const timeQuery = getQueryString('time') || "";
+	let aTime = timeQuery.includes(":") ? timeQuery.toMilitary() : parseInt(timeQuery, 10);
+	
 	let currentTime = aTime >= 0 && aTime < 2400 && aTime % 100 < 60 ? aTime : getCurrentTime();
 
 	if (currentDay === 0 || currentDay === 6) {
-		addParagraph("list", "It’s the weekend :P");
+		$.id("weekend").style.display = "unset";
 	} else {
 		// Make an Ajax request to load data from a local json file.	
 		let url = "labs.json"; 
