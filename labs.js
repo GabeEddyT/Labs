@@ -1,8 +1,9 @@
 (() => {
 	// jQuery-imitating alias for document.querySelector to condense code a bit.
-	const $ = document.querySelector.bind(document);
-	$.class = (query) => document.getElementsByClassName(query)[0];
-	$.id = document.getElementById.bind(document);
+	/** @returns {HTMLElement} */
+	const $ = (query) => document.querySelector(query);
+	$.class = (query) => document.getElementsByClassName(query)[0];	
+	$.id = (query) => document.getElementById(query);
 	$.tag = (query) => document.getElementsByTagName(query)[0];
 
 	// Represent a number (that has a military time value) as a standard time string.	
@@ -320,6 +321,7 @@
 		list.style.opacity = 0;
 		list.style.pointerEvents = "none";		
 		view.style.opacity = 1;
+		showExtra() && shake();
 	}
 
 	// Fade out view and fade in main site
@@ -350,6 +352,7 @@
 
 	const showExtra = () => $.id("tier-extra").style.left == "-100%";
 
+	// Toggle tier visibility, triggering animations.
 	$.class("tier").onclick = () => {
 		$.id("tier-extra").style.left = showExtra() ? "0%" : "-100%"; 
 		if (!showExtra()) {
@@ -361,7 +364,8 @@
 		}
 	};
 
-	$.class("tier").addEventListener("transitionend", () =>{
+	// Set width for tier so that it isn't clickable when hidden.
+	$.id("tier-extra").addEventListener("transitionend", () =>{
 		$.id("tier-container").style.width = showExtra() ? "0" : "auto";
 	});
 
@@ -371,6 +375,24 @@
 			hideView();
 		}
 	}
+	
+	const shaker = $.id("tier-shake");
+	let shaking = false;
+	shaker.onmouseover = () => shaking || shake(3, 10);
+
+	// Shake tier icon when view revealed.
+	function shake(limit = 4, degrees = 15){
+		shaking = true;
+		for(let i = 0; i <= limit; i++){
+			setTimeout(() => {shaker.style.transform = 
+					// negate on odds
+					`rotate(${(i & 1 && "-") + degrees * ((limit - i) / limit)}deg)`;
+					limit === i && (shaking = false)}, 
+				100 * i
+			);
+		}
+	}
+	
 	
 	function handleClick(event){
 		if(!event.target.closest(".view")){

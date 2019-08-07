@@ -135,14 +135,17 @@ p {
     font-size: .9em;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    transition: font-size .4s;
 }
 
-#tier-main {
+#tier-main{
     font-size: 36pt;
     display: inline-block;
-    transition: transform .5s ease-in-out;    
-    
+    transition: transform .5s ease-in-out;        
+}
+
+#tier-shake{
+    transition: transform .1s ease-in-out;
+    display: inline-block;
 }
 
 #tier-extra i{
