@@ -2,6 +2,7 @@
 	// jQuery-imitating alias for document.querySelector to condense code a bit.
 	/** @returns {HTMLElement} */
 	const $ = (query) => document.querySelector(query);
+	/** @returns {HTMLElement} */
 	$.class = (query) => document.getElementsByClassName(query)[0];	
 	$.id = (query) => document.getElementById(query);
 	$.tag = (query) => document.getElementsByTagName(query)[0];
@@ -318,10 +319,12 @@
 		close.style.pointerEvents = "auto";
 		title.innerHTML = name;
 		body.innerHTML = description;
-		list.style.opacity = 0;
+		list.style.opacity = 0.2;
+		list.style.zIndex = 0;
 		list.style.pointerEvents = "none";		
+		view.style.transform = "scale(1)";
 		view.style.opacity = 1;
-		showExtra() && shake();
+		setTimeout(() => showExtra() && shake(), 200);
 	}
 
 	// Fade out view and fade in main site
@@ -333,7 +336,9 @@
 		close.style.pointerEvents = "none";
 		list.style.opacity = 1;
 		list.style.pointerEvents = "auto";
+		list.style.zIndex = 1;
 		view.style.opacity = 0;
+		view.style.transform = "scale(0)";
 	}
 
 	// Hide the view on clicking the X button
