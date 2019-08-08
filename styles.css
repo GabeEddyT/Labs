@@ -78,9 +78,17 @@ p {
     padding-top: 50px;
     width: 90%;
     max-width: 1280px;
-    opacity: 0;
     transition: opacity .4s, transform .4s;
     position: fixed;
+}
+
+.wrapper.hidden{
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.wrapper.y-animated{
+    transition: padding .4s, opacity .4s, transform .4s;
 }
 
 .view{
@@ -88,7 +96,7 @@ p {
     padding: 50px;
     display: flex;
     flex-direction: column;
-    background-color: #2f2f2f;
+    background-color: #2f2f2fd9;
     border-radius: 25px;
     height: 100%;
     position: relative;
@@ -170,6 +178,13 @@ p {
     transition: opacity .4s;
     z-index: 1;
     margin: 8px;
+}
+
+#list.hidden{
+    opacity: 0.2;
+    z-index: 0;
+    pointer-events: none;	
+    filter: blur(3px);
 }
 
 .capitalized{

@@ -319,11 +319,16 @@
 		close.style.pointerEvents = "auto";
 		title.innerHTML = name;
 		body.innerHTML = description;
-		list.style.opacity = 0.2;
-		list.style.zIndex = 0;
-		list.style.pointerEvents = "none";		
-		view.style.transform = "scale(1)";
-		view.style.opacity = 1;
+		const origin = $.id(name);
+
+		view.classList.remove("y-animated");
+		view.style.paddingTop = origin.getBoundingClientRect().top - view.getBoundingClientRect().height * .75 + "px";
+		requestAnimationFrame(() => view.classList.add("y-animated"));
+		requestAnimationFrame(() => view.style.paddingTop = null);
+
+		list.classList.add("hidden");
+		view.classList.remove("hidden");
+
 		setTimeout(() => showExtra() && shake(), 200);
 	}
 
@@ -334,11 +339,9 @@
 		const close = $.class("close");
 
 		close.style.pointerEvents = "none";
-		list.style.opacity = 1;
-		list.style.pointerEvents = "auto";
-		list.style.zIndex = 1;
-		view.style.opacity = 0;
-		view.style.transform = "scale(0)";
+
+		list.classList.remove("hidden");
+		view.classList.add("hidden");
 	}
 
 	// Hide the view on clicking the X button
@@ -348,10 +351,10 @@
 
 	// Hide the view on clicking outside
 	$.class("wrapper").addEventListener("transitionend", () => {
-		if($.class("wrapper").style.opacity == 1){
-			$.tag("html").addEventListener("click", handleClick);
+		if(window.getComputedStyle($.class("wrapper")).opacity == 1){
+			document.addEventListener("click", handleClick);
 		}else{
-			$.tag("html").removeEventListener("click", handleClick); 
+			document.removeEventListener("click", handleClick); 
 		}
 	});	
 
@@ -402,9 +405,11 @@
 	function handleClick(event){
 		if(!event.target.closest(".view")){
 			hideView();
-			$.tag("html").removeEventListener("click", handleClick);
+			document.removeEventListener("click", handleClick);
 		}
 	}
+
+	$(".wrapper").style = null;
 
 	let occupiedRooms = [];
 
