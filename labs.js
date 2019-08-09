@@ -360,9 +360,9 @@
 	// Hide the view on clicking outside
 	$.class("wrapper").addEventListener("transitionend", () => {
 		if(window.getComputedStyle($.class("wrapper")).opacity == 1){
-			document.addEventListener("click", handleClick);
+			$.tag("html").addEventListener("click", handleClick);
 		}else{
-			document.removeEventListener("click", handleClick); 
+			$.tag("html").removeEventListener("click", handleClick); 
 		}
 	});	
 
@@ -413,7 +413,7 @@
 	function handleClick(event){
 		if(!event.target.closest(".view")){
 			hideView();
-			document.removeEventListener("click", handleClick);
+			$.tag("html").removeEventListener("click", handleClick);
 		}
 	}
 
