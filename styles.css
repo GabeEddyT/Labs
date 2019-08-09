@@ -78,17 +78,18 @@ p {
     padding-top: 50px;
     width: 90%;
     max-width: 1280px;
-    transition: opacity .4s, transform .4s;
+    transition: opacity .4s;
     position: fixed;
+    transform: translate(0, 0);
 }
 
 .wrapper.hidden{
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(0.5) translate(0, var(--offset));
 }
 
 .wrapper.y-animated{
-    transition: padding .4s, opacity .4s, transform .4s;
+    transition: opacity .4s, transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .view{

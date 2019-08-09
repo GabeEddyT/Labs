@@ -319,24 +319,32 @@
 		close.style.pointerEvents = "auto";
 		title.innerHTML = name;
 		body.innerHTML = description;
+		
 		const origin = $.id(name);
+		hideView.origin = origin;
+		
+		view.style.setProperty("--offset", origin.getBoundingClientRect().top * 2 - view.getBoundingClientRect().height + "px");
+		view.classList.remove("y-animated");		
 
-		view.classList.remove("y-animated");
-		view.style.paddingTop = origin.getBoundingClientRect().top - view.getBoundingClientRect().height * .75 + "px";
-		requestAnimationFrame(() => view.classList.add("y-animated"));
-		requestAnimationFrame(() => view.style.paddingTop = null);
-
+		// Wrapping this in another `requestAnimationFrame` because Firefox loves racing.
+		window.requestAnimationFrame(() => {
+			window.requestAnimationFrame(() => view.classList.add("y-animated"));
+			window.requestAnimationFrame(() => view.classList.remove("hidden"));
+		});
+		
 		list.classList.add("hidden");
-		view.classList.remove("hidden");
 
 		setTimeout(() => showExtra() && shake(), 200);
 	}
 
 	// Fade out view and fade in main site
-	function hideView(){
+	function hideView(){		
 		const view = $.class("wrapper");
 		const list = $.id("list");
 		const close = $.class("close");
+
+		const origin = hideView.origin;
+		view.style.setProperty("--offset", origin.getBoundingClientRect().top * 2 - view.getBoundingClientRect().height + "px");
 
 		close.style.pointerEvents = "none";
 
