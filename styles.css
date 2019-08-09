@@ -92,7 +92,9 @@ p {
 }
 
 .wrapper.y-animated{
-    transition: opacity .4s, transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275), visibility .4s;
+    --exp: cubic-bezier(0.2, 0.2, .2, 1.1);
+    --ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: opacity .4s, transform .4s var(--exp), visibility .4s;
 }
 
 .view{
