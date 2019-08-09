@@ -81,15 +81,18 @@ p {
     transition: opacity .4s;
     position: fixed;
     transform: translate(0, 0);
+    pointer-events: visible;
+    z-index: 1;
 }
 
 .wrapper.hidden{
     opacity: 0;
+    visibility: hidden;
     transform: scale(0.5) translate(0, var(--offset));
 }
 
 .wrapper.y-animated{
-    transition: opacity .4s, transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: opacity .4s, transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275), visibility .4s;
 }
 
 .view{
@@ -177,13 +180,11 @@ p {
     opacity: 1;
     position: absolute;
     transition: opacity .4s;
-    z-index: 1;
     margin: 8px;
 }
 
 #list.hidden{
     opacity: 0.2;
-    z-index: 0;
     pointer-events: none;	
     filter: blur(3px);
 }
