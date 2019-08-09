@@ -329,10 +329,12 @@
 		// Wrapping this in another `requestAnimationFrame` because Firefox loves racing.
 		window.requestAnimationFrame(() => {
 			window.requestAnimationFrame(() => view.classList.add("y-animated"));
-			window.requestAnimationFrame(() => view.classList.remove("hidden"));
+			window.requestAnimationFrame(() => {
+				view.classList.remove("hidden");
+				list.classList.add("hidden");
+			});
 		});
 		
-		list.classList.add("hidden");
 
 		setTimeout(() => showExtra() && shake(), 200);
 	}
@@ -360,9 +362,9 @@
 	// Hide the view on clicking outside
 	$.class("wrapper").addEventListener("transitionend", () => {
 		if(window.getComputedStyle($.class("wrapper")).opacity == 1){
-			$.tag("html").addEventListener("click", handleClick);
+			document.addEventListener("click", handleClick);
 		}else{
-			$.tag("html").removeEventListener("click", handleClick); 
+			document.removeEventListener("click", handleClick); 
 		}
 	});	
 
@@ -413,7 +415,7 @@
 	function handleClick(event){
 		if(!event.target.closest(".view")){
 			hideView();
-			$.tag("html").removeEventListener("click", handleClick);
+			document.removeEventListener("click", handleClick);
 		}
 	}
 
