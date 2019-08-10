@@ -1,10 +1,14 @@
 (() => {
-	// jQuery-imitating alias for document.querySelector to condense code a bit.
-	/** @returns {HTMLElement} */
+	/** 
+	 * jQuery-imitating alias for document.querySelector to condense code a bit.
+	 * @returns {HTMLElement} An element matching the query.
+	 */
 	const $ = (query) => document.querySelector(query);
-	/** @returns {HTMLElement} */
+	/** @returns {HTMLElement} First element with class */
 	$.class = (query) => document.getElementsByClassName(query)[0];	
+	/** @returns {HTMLElement} Element with ID */
 	$.id = (query) => document.getElementById(query);
+	/** @returns {HTMLElement} First element of tag */
 	$.tag = (query) => document.getElementsByTagName(query)[0];
 
 	// Represent a number (that has a military time value) as a standard time string.	
@@ -167,6 +171,128 @@
 		let div = document.getElementById(divId);
 		return div.appendChild(para);
 	}
+
+	/**
+	 * Element builder class to hopefully deprecate `addParagraph`.
+	 * Complete with a host of chain methods so we can truly "daisychain these things".
+	 */
+	class Para{
+		/**
+		 * Calls `document.createElement` with the given tag.
+		 * @param {string} tag The type of element to create.
+		 * @param {boolean} literal If true, `append` will append given strings as they are, instead of trying to inject raw HTML into the DOM.
+		 */
+		constructor(tag = "p", literal = false){
+			/**
+			 * Specifies how raw HTML strings are appended.  
+			 * @type {boolean} 
+			 */
+			this.literal = literal;
+			/** 
+			 * The actual DOM element being manipulated. 
+			 * @type {HTMLElement}
+		     */
+			this.element = document.createElement(tag);
+		}
+
+		/**
+		 * @param {string} id A unique ID to give the element. 
+		 */
+		id(id){			
+			this.element.id = id;
+			return this;
+		}
+
+		/**
+		 * Appends this `Para` to a parent node.
+		 * @param {HTMLElement | string} parent A parent element or ID.
+		 */
+		parent(parent){
+			parent.appendChild(this.element) || $.id(parent).appendChild(this.element);
+			return this;
+		}
+
+		/** @param { ...(HTMLElement | Para | string)} children One or more elements to append. */
+		append(...children){
+			for(let child of children){
+				if(typeof child == "string" && !this.literal){
+					this.raw(child);
+				}else{
+					child.hasOwnProperty("raw") ? this.raw(child.raw) : 
+						this.element.append(child.element || child);
+				}
+			};
+			return this;
+		}
+
+		/**
+		 * Add classes to `classList`.
+		 * @param  {...string} name One or more class names.
+		 */
+		class(...name){
+			this.element.classList.add(...name);
+			return this;
+		}
+
+		/**
+		 * Adds an href to (hopefully) an anchor tag.
+		 * @param {string} href String containing href.
+		 */
+		href(href){
+			this.element.href = href;
+			return this;
+		}
+		
+		/**
+		 * Appends raw html. Handles tags, `&nbsp;`, `&rsquo;`, `&mdash;` and the like.
+		 * Used in `append` by default unless `Para.literal` is true.
+		 * @param {string} html String containing raw html.
+		 * @example 
+		 * // Helpful for rich text tags which would be counterproductive to write out as
+		 * new Para().append("I ", new Para("strong").append("don't"), " speak ", new Para("em").append("I T A L I C S"), ".")
+		 * // instead of
+		 * new Para().raw("I <strong>don't</strong> speak <em>I T A L I C S</em>.")
+		 */
+		raw(html){
+			this.element.insertAdjacentHTML("beforeend", html);
+			return this;
+		}
+
+		/**
+		 * Add styles to element based on object properties.
+		 * @template Property, Value
+		 * @param {...{Property: Value}} styles Object(s) containing CSS properties and values.
+		 * @param {Property | string} styles.Property CSS property to change
+		 * @param {string} styles.Value Value to assign property
+		 * @example 		 
+		 * // This ludicrously long style chain containing three objects 
+		 * // with differing amounts of properties
+		 * new Para("table").append("yes").parent(document.body)
+		 * .style({color: "yellow", "z-index": 40}, // (two properties)
+		 * {"line-height": 2, "font-size":`${54}pt`, "font-family": "Orkney Medium Italic", "--custom-color-rating": "favourite"}, // (four properties)
+		 * {cursor: "help"}); // (single property)
+		 * 
+		 * // could also have styles applied from a single object 
+		 * // with eight properties
+		 * new Para("table").append("yes").parent(document.body)
+		 * .style({color: "yellow", "z-index": 40, "line-height": 2, "font-size":`${54}pt`, "font-family": "Orkney Medium Italic", "--custom-color-rating": "favourite", cursor: "help"}); 
+		 * 
+		 * // Either method results in this DOM element
+		 * <table style="color: yellow; z-index: 40; line-height: 2; font-size: 54pt; font-family: 'Orkney Medium Italic'; --custom-color-rating:favourite; cursor: help;">yes</table>
+		 * 
+		 * // Though you should probably be using a class 
+		 * // if you have this much styling to do. 
+		 * // Probably.
+		 */
+		style(...styles){
+			for (let props of styles){
+				for (let prop in props){
+					this.element.style.setProperty(prop, props[prop]);
+				}
+			}
+			return this;
+		}
+	}	
 
 	// Grab a query string.
 	function getQueryString(field) {
