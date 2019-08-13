@@ -1,14 +1,22 @@
 (() => {
 	/** 
 	 * jQuery-imitating alias for document.querySelector to condense code a bit.
+	 * @name $
+	 * @class
 	 * @returns {HTMLElement} An element matching the query.
 	 */
 	const $ = (query) => document.querySelector(query);
-	/** @returns {HTMLElement} First element with class */
+	/** 
+	 * @memberof $
+	 * @returns {HTMLElement} First element with class */
 	$.class = (query) => document.getElementsByClassName(query)[0];	
-	/** @returns {HTMLElement} Element with ID */
+	/** 
+	 * @memberof $ 
+	 * @returns {HTMLElement} Element with ID */
 	$.id = (query) => document.getElementById(query);
-	/** @returns {HTMLElement} First element of tag */
+	/** 
+	 * @memberof $
+	 * @returns {HTMLElement} First element of tag */
 	$.tag = (query) => document.getElementsByTagName(query)[0];
 
 	// Represent a number (that has a military time value) as a standard time string.	
@@ -62,22 +70,45 @@
 		return time;
 	}
 
-	// The venerable Timeslot, with its start and end time.
-	// Graceful in its place of subverting the two-dimensional array.
+	
+	/**
+	 * The venerable Timeslot, with its start and end time.
+	 * Graceful in its place of subverting the two-dimensional array.
+	 */
 	class Timeslot {
+
+		/**
+		 * Creates a Timeslot with the given 24-hr start and end times.
+		 * @param {number} start The time the room opens up
+		 * @param {number} end The time this room has another class
+		 */
 		constructor(start, end) {
 			this.start = start;
 			this.end = end;
 		}
 
-		// Return the timeslot as a string.
-		// eg. 9:30AM–12:00PM
+		/**
+		 * The timeslot expressed as a human-readable time range string.
+		 * @readonly
+		 * @example 
+		 * <caption>9:30 AM–12:00 PM</caption>
+		 * new Timeslot(930, 1230).range
+		 */
 		get range() {
 			return this.start.asTime() + "–" + this.end.asTime();
 		}
 
-		// Check if a given time is in this timeslot.
-		// Simple, yet effective.
+	
+		/**
+		 * Check if a given time is in this timeslot.
+		 * Simple, yet effective.
+		 * @param {number} time Time to check
+		 * @returns {boolean} Whether the given time is contained.
+		 * @example 
+		 * <caption>{start: 1145, end: 1400}</caption>
+		 * .inTimeslot(1512) => false
+		 * .inTimeslot(1327) => true
+		 */
 		inTimeslot(time) {
 			if (this.start <= time && time < this.end) {
 				return true;
@@ -86,18 +117,29 @@
 			}
 		}
 	}
-
-	// Oh, what a Day. What a lovely Day... class.
-	// Simply put, a subcontainer for timeslots.
+	
+	/**
+	 * Oh, what a Day. What a lovely Day... class 
+	 * Simply put, a subcontainer for timeslots.	 
+	 */
 	class Day {
+		/**
+		 * Fills a Day with the given timeslots.
+		 * @param {Timeslot[]} timeslots Available free time ranges for the day
+		 */
 		constructor(timeslots) {
-			this.name = "day";
+			/** @member {Timeslot[]} */
 			this.timeslots = timeslots;
 		}
 
-		// Tells whether the given time is in any of the timeslots.
-		// Or does it tell which timeslot is present at a given time?
-		// Aren't multiple return types a beauty?
+		
+		/**
+		 * Tells whether the given time is in any of the timeslots.
+		 * Or does it tell which timeslot is present at a given time?
+		 * Aren't multiple return types a beauty?
+		 * @param {number} time A military time to check
+		 * @returns {Timeslot | false} The timeslot containing this time or false if none exists.
+		 */
 		isContained(time) {
 			for (let i = 0; i < this.timeslots.length; i++) {
 				if (this.timeslots[i].inTimeslot(time)) {
@@ -107,7 +149,12 @@
 			return false;
 		}
 
-		// Like the function above, except this one tells us the timeslot following our time.
+		/**
+		 * Like the function above, except this one tells us the timeslot following our time.
+		 * @param {number} time
+		 * @returns {Timeslot} The next available timeslot 
+		 * @returns {false} This lab is done for the day.
+		 */
 		nextOpen(time) {
 			for (let i = 0; i < this.timeslots.length; i++) {
 				if (time < this.timeslots[i].start) {
@@ -204,7 +251,7 @@
 		}
 
 		/**
-		 * Appends this `Para` to a parent node.
+		 * Appends `this.element` to a parent node.
 		 * @param {HTMLElement | string} parent A parent element or ID.
 		 */
 		parent(parent){
@@ -227,7 +274,7 @@
 
 		/**
 		 * Add classes to `classList`.
-		 * @param  {...string} name One or more class names.
+		 * @param {...string} name One or more class names.
 		 */
 		class(...name){
 			this.element.classList.add(...name);
@@ -248,6 +295,7 @@
 		 * Used in `append` by default unless `Para.literal` is true.
 		 * @param {string} html String containing raw html.
 		 * @example 
+		 * <caption>I <strong>don’t</strong> speak <em>I T A L I C S</em>.</caption>
 		 * // Helpful for rich text tags which would be counterproductive to write out as
 		 * new Para().append("I ", new Para("strong").append("don't"), " speak ", new Para("em").append("I T A L I C S"), ".")
 		 * // instead of
@@ -258,27 +306,29 @@
 			return this;
 		}
 
-		/**
+		/**	 
 		 * Add styles to element based on object properties.
 		 * @template Property, Value
 		 * @param {...{Property: Value}} styles Object(s) containing CSS properties and values.
 		 * @param {Property | string} styles.Property CSS property to change
 		 * @param {string} styles.Value Value to assign property
-		 * @example 		 
+		 * 
+		 * @example 
+		 * <caption><div style="color: yellow; z-index: 40; line-height: 2; font-size: 54pt; font-family: 'Orkney Medium Italic'; --custom-color-rating:favourite; cursor: help;">yes</div></caption>
 		 * // This ludicrously long style chain containing three objects 
 		 * // with differing amounts of properties
-		 * new Para("table").append("yes").parent(document.body)
+		 * new Para("div").append("yes").parent(document.body)
 		 * .style({color: "yellow", "z-index": 40}, // (two properties)
 		 * {"line-height": 2, "font-size":`${54}pt`, "font-family": "Orkney Medium Italic", "--custom-color-rating": "favourite"}, // (four properties)
 		 * {cursor: "help"}); // (single property)
 		 * 
 		 * // could also have styles applied from a single object 
 		 * // with eight properties
-		 * new Para("table").append("yes").parent(document.body)
+		 * new Para("div").append("yes").parent(document.body)
 		 * .style({color: "yellow", "z-index": 40, "line-height": 2, "font-size":`${54}pt`, "font-family": "Orkney Medium Italic", "--custom-color-rating": "favourite", cursor: "help"}); 
 		 * 
 		 * // Either method results in this DOM element
-		 * <table style="color: yellow; z-index: 40; line-height: 2; font-size: 54pt; font-family: 'Orkney Medium Italic'; --custom-color-rating:favourite; cursor: help;">yes</table>
+		 * <div style="color: yellow; z-index: 40; line-height: 2; font-size: 54pt; font-family: 'Orkney Medium Italic'; --custom-color-rating:favourite; cursor: help;">yes</div>
 		 * 
 		 * // Though you should probably be using a class 
 		 * // if you have this much styling to do. 
@@ -292,7 +342,7 @@
 			}
 			return this;
 		}
-	}	
+	}		
 
 	// Grab a query string.
 	function getQueryString(field) {
