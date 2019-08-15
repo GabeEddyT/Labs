@@ -1,3 +1,5 @@
+"use strict";
+
 (() => {
 	// jQuery-imitating alias for document.querySelector to condense code a bit.
 	/** @returns {HTMLElement} */
@@ -9,20 +11,20 @@
 
 	// Represent a number (that has a military time value) as a standard time string.	
 	Number.prototype.asTime = function () {
-		this.time = this % 2400; // Hack to allow earlier later values... that made more sense in my head
-		if (this.time < 100) {
-			return "12:" + (this.time.valueOf() + "").padStart(2, "0") + " AM";
-		} else if (this.time == 2400) {
+		let myTime = this % 2400; // Hack to allow earlier later values... that made more sense in my head
+		if (myTime < 100) {
+			return "12:" + (myTime.valueOf() + "").padStart(2, "0") + " AM";
+		} else if (myTime == 2400) {
 			return "12:00 AM";
-		} else if (this.time >= 1300) {
-			let num = this.time.valueOf();
+		} else if (myTime >= 1300) {
+			let num = myTime.valueOf();
 			num = num - 1200;
 			let time = Math.trunc(num / 100) + ":" + (num % 100 + "").padStart(2, "0") + " PM";
 			return time;
-		} else if (this.time >= 1200) {
-			return "12:" + (this.time % 100 + "").padStart(2, "0") + " PM";
+		} else if (myTime >= 1200) {
+			return "12:" + (myTime % 100 + "").padStart(2, "0") + " PM";
 		} else {
-			let num = this.time.valueOf();
+			let num = myTime.valueOf();
 			return Math.trunc(num / 100) + ":" + (num % 100 + "").padStart(2, "0") + " AM";
 		}
 	}
@@ -162,7 +164,7 @@
 		}
 		
 		pId ? para.id = pId : null;
-		style ? para.style = style : null;
+		style ? para.style.cssText = style : null;
 		pClass ? para.classList.add(pClass) : null;
 		let div = document.getElementById(divId);
 		return div.appendChild(para);
@@ -418,8 +420,6 @@
 			document.removeEventListener("click", handleClick);
 		}
 	}
-
-	$(".wrapper").style = null;
 
 	let occupiedRooms = [];
 

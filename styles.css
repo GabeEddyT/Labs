@@ -46,10 +46,11 @@ body{
     color: WHITESMOKE;
     font-family: 'Orkney Medium', sans-serif;
     background-color: #1f1f1f;
-    position: relative;
+    align-items: center; 
+    display: flex;        
+    -ms-flex-pack: center;    
     flex-direction: column;
-    align-items: center;
-    display: flex;
+    -ms-flex-direction: row;     
     height: 100%;
     font-size: 24pt;
     margin: 0;
@@ -78,7 +79,11 @@ p {
     padding-top: 50px;
     width: 90%;
     max-width: 1280px;
-    transition: opacity .4s;
+    transition: opacity .4s;    
+    margin: auto; 
+    left: 0;
+    right: 0;
+    top: 0;
     position: fixed;
     transform: translate(0, 0);
     pointer-events: visible;
@@ -88,25 +93,30 @@ p {
 .wrapper.hidden{
     opacity: 0;
     visibility: hidden;
+    transform: scale(0.5);
     transform: scale(0.5) translate(0, var(--offset));
 }
 
 .wrapper.y-animated{
     --exp: cubic-bezier(0.2, 0.2, .2, 1.1);
     --ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: opacity .4s, transform .4s cubic-bezier(0.2, 0.2, .2, 1.1), visibility .4s;
     transition: opacity .4s, transform .4s var(--exp), visibility .4s;
 }
 
-.view{
-    align-items: center;
-    padding: 50px;
-    display: flex;
+.view h1{ 
+    text-align: center;
+}
+
+.view{          
+    padding: 50px;    
+    display: flex;    
     flex-direction: column;
-    background-color: #2f2f2fd9;
+    background-color: rgba(47, 47, 47, 0.85);
     border-radius: 25px;
     height: 100%;
-    position: relative;
-    padding-bottom: 25px;
+    position: relative;    
+    padding-bottom: 25px;      
 }
 
 .close{
@@ -148,6 +158,7 @@ p {
     cursor: pointer;
     font-size: .9em;
     user-select: none;
+    -ms-user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -180,7 +191,6 @@ p {
 
 #list{    
     opacity: 1;
-    position: absolute;
     transition: opacity .4s;
     margin: 8px;
 }
