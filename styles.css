@@ -193,6 +193,7 @@ p {
     opacity: 1;
     transition: opacity .4s;
     margin: 8px;
+    padding-left: 8px;
 }
 
 #list.hidden{
