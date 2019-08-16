@@ -10,9 +10,9 @@ pages:
   script:
     - npm install
     - mkdir public
-    - npx babel labs.js -o public/labs-polyfill.js --presets=babel-preset-env
+    - npx babel labs.js --presets=env | npx uglifyjs -o public/labs-polyfill.min.js
   artifacts:
     paths:
-    - public
+      - public
   only:
   - /^staging\/.*$/
