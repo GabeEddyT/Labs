@@ -1,0 +1,18 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+
+pages:
+  stage: deploy
+  script:
+    - npm install
+    - mkdir public
+    - npx babel labs.js -o public/labs-polyfill.js --presets=babel-preset-env
+  artifacts:
+    paths:
+    - public
+  only:
+  - /^staging\/.*$/

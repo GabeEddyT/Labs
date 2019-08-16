@@ -1,0 +1,24 @@
+{
+  "name": "labs",
+  "version": "1.0.0",
+  "description": "What Labs Are Open?",
+  "main": "labs.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "scripts": {
+    "start": "echo Hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabeEddyT/Labs.git"
+  },
+  "author": "Gabe Troyan",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/GabeEddyT/Labs/issues"
+  },
+  "homepage": "https://github.com/GabeEddyT/Labs#readme"
+}
