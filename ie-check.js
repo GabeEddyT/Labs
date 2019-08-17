@@ -30,7 +30,7 @@ try {
     // attach babel-converted script
     window.onload = function(){
         let labScript = document.createElement("script");
-        labScript.src = "labs-polyfill.js";                    
+        labScript.src = "https://gabeeddyt.gitlab.io/labs-2.0/labs-polyfill.min.js";                    
         document.body.appendChild(labScript);
     };
 }
