@@ -440,7 +440,7 @@
 	let currentTime = aTime >= 0 && aTime < 2400 && aTime % 100 < 60 ? aTime : getCurrentTime();
 
 	if (currentDay === 0 || currentDay === 6) {
-		$.id("weekend").style.display = "unset";
+		$.id("weekend").style.display = "";
 	} else {
 		// Make an Ajax request to load data from a local json file.	
 		let url = "labs.json"; 
