@@ -25,6 +25,23 @@ try {
         return null;
         };
     }
+
+    // "polyfill" for replacing `var()` in css using data-* attributes
+    /** @type {HTMLStyleElement} */
+    const offsetStyle = document.createElement("style");
+    offsetStyle.id = "offsetStyle";
+    document.head.appendChild(offsetStyle);
+    
+    // Trigger on changes to `data-offset`
+    const observer = new MutationObserver(function(mutationsList, observer) {
+		for (let i = 0; i < mutationsList.length; i++) {	
+			let mutation = mutationsList[i];
+			/** @type {HTMLElement} */		
+            const element = mutation.target;    
+            // Insert value of `data-offset` where `var(--offset)` would be.
+            offsetStyle.innerHTML = ".wrapper.hidden{ transform: scale(0.5) translate(0, " + element.getAttribute("data-offset") + ");}";
+		}
+	}).observe(document.getElementsByClassName("wrapper")[0], { attributes: true, attributeFilter: ["data-offset"] });
     
     // After the core-js polyfills are loaded, 
     // attach babel-converted script
