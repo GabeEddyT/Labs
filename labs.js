@@ -326,7 +326,9 @@
 		hideView.origin = origin;
 		
 		view.style.setProperty("--offset", origin.getBoundingClientRect().top * 2 - view.getBoundingClientRect().height + "px");
-		view.classList.remove("y-animated");		
+		// Storing data for IE workaround
+		view.setAttribute("data-offset", origin.getBoundingClientRect().top * 2 - view.getBoundingClientRect().height + "px");		
+		view.classList.remove("y-animated");
 
 		// Wrapping this in another `requestAnimationFrame` because Firefox loves racing.
 		window.requestAnimationFrame(() => {
@@ -349,11 +351,13 @@
 
 		const origin = hideView.origin;
 		view.style.setProperty("--offset", origin.getBoundingClientRect().top * 2 - view.getBoundingClientRect().height + "px");
+		// Storing data for IE workaround
+		view.setAttribute("data-offset", origin.getBoundingClientRect().top * 2 - view.getBoundingClientRect().height + "px");		
 
 		close.style.pointerEvents = "none";
 
 		list.classList.remove("hidden");
-		view.classList.add("hidden");
+		view.classList.add("hidden");		
 	}
 
 	// Hide the view on clicking the X button
