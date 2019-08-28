@@ -1313,108 +1313,191 @@
 			"main":"<i class='mdi mdi-apple'></i>",
 			"extra":"<i class='mdi mdi-desktop-mac'></i><i class='mdi mdi-video-4k-box'></i> Pro 580 <i class='mdi mdi-star'></i><i class='mdi mdi-star-outline'></i><i class='mdi mdi-star-outline'></i>"
 		}
-  },
-  {
-    "name": "Ireland 117",
-    "days": [
-      {
-        "name": "Monday",
-        "timeslots": [
-          {
-            "start": 0,
-            "end": 930
-          },
-          {
-            "start": 1045,
-            "end": 1230
-          },
-          {
-            "start": 1700,
-            "end": 1730
-          },
-          {
-            "start": 2015,
-            "end": 2400
-          }
-        ]
-      },
-      {
-        "name": "Tuesday",
-        "timeslots": [
-          {
-            "start": 0,
-            "end": 930
-          },
-          {
-            "start": 1645,
-            "end": 2400
-          }
-        ]
-      },
-      {
-        "name": "Wednesday",
-        "timeslots": [
-          {
-            "start": 0,
-            "end": 930
-          },
-          {
-            "start": 1215,
-            "end": 1400
-          },
-          {
-            "start": 1445,
-            "end": 1530
-          },
-          {
-            "start": 1615,
-            "end": 2400
-          }
-        ]
-      },
-      {
-        "name": "Thursday",
-        "timeslots": [
-          {
-            "start": 0,
-            "end": 930
-          },
-          {
-            "start": 1045,
-            "end": 1230
-          },
-          {
-            "start": 1645,
-            "end": 2400
-          }
-        ]
-      },
-      {
-        "name": "Friday",
-        "timeslots": [
-          {
-            "start": 0,
-            "end": 930
-          },
-          {
-            "start": 1215,
-            "end": 1400
-          },
-          {
-            "start": 1445,
-            "end": 1530
-          },
-          {
-            "start": 1615,
-            "end": 2400
-          }
-        ]
-      }
-    ],
-    "description": "Ah, yes, Ireland Eleventy-Seven: My favorite lab with dual-monitors. So many years spent in this existent lab with RTX 2060s and eight-core Coffee Lakes.",
-    "tier": {
-      "main": "<i class='mdi mdi-artstation'></i>",
-      "extra": "<i class='mdi mdi-monitor-multiple''></i> RTX 2060 <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star'></i>"
-    }
-  }
+	},
+	{
+		"name": "Ireland 117",
+		"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1045,
+						"end": 1230
+					},
+					{
+						"start": 1700,
+						"end": 1730
+					},
+					{
+						"start": 2015,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1215,
+						"end": 1400
+					},
+					{
+						"start": 1445,
+						"end": 1530
+					},
+					{
+						"start": 1615,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1045,
+						"end": 1230
+					},
+					{
+						"start": 1645,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1215,
+						"end": 1400
+					},
+					{
+						"start": 1445,
+						"end": 1530
+					},
+					{
+						"start": 1615,
+						"end": 2400
+					}
+				]
+			}
+		],
+		"description": "Ah, yes, Ireland Eleventy-Seven: My favorite lab with dual-monitors. So many years spent in this existent lab with RTX 2060s and eight-core Coffee Lakes.",
+		"tier": {
+			"main": "<i class='mdi mdi-artstation'></i>",
+			"extra": "<i class='mdi mdi-monitor-multiple''></i> RTX 2060 <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star'></i>"
+		}
+  	},
+  	{
+	  	"name": "Metz 200",
+	  	"days": [
+			{
+				"name": "Monday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 900
+					},
+					{
+						"start": 1300,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Tuesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 930
+					},
+					{
+						"start": 1130,
+						"end": 1230
+					},
+					{
+						"start": 1430,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Wednesday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 1230
+					},
+					{
+						"start": 1430,
+						"end": 1700
+					},
+					{
+						"start":1900,
+						"end":2400
+					}
+				]
+			},
+			{
+				"name": "Thursday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 1600
+					},
+					{
+						"start": 1800,
+						"end": 2400
+					}
+				]
+			},
+			{
+				"name": "Friday",
+				"timeslots": [
+					{
+						"start": 0,
+						"end": 1230
+					},
+					{
+						"start": 1430,
+						"end": 2400
+					}
+				]
+			}
+		],
+	  	"description": "Let’s see how long it takes before programmers lose access this year, shall we?",
+	  	"tier": {
+		  	"main": "<i class='mdi mdi-apple'></i>",
+		  	"extra": "<i class='mdi mdi-desktop-mac'></i><i class='mdi mdi-video-4k-box'></i> R9 M295X <i class='mdi mdi-star'></i><i class='mdi mdi-star-outline'></i><i class='mdi mdi-star-outline'></i>"
+	  	}
+  	}
 ]
