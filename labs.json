@@ -154,7 +154,7 @@
 		"description":"The primary domain of Quality Assurance and Cody’s <em>former</em> home. Only one monitor here, but (on paper, at least) these are some of the best computers Champlain has.",
 		"tier":{
 			"main":"<i class='mdi mdi-artstation'></i>",			
-			"extra":"<i class='mdi mdi-monitor'></i><i class='mdi mdi-video-4k-box'></i> GTX 1080 <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star-half'></i>"
+			"extra":"<i class='mdi mdi-monitor'></i><i class='mdi mdi-video-4k-box'></i> GTX 1080 Ti <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star-half'></i>"
 		}
 	},
 	{
@@ -416,7 +416,7 @@
 		"description":"Home to all sorts of fun and enlightening classes such as Game Architecture, Game AI, and Graphics of all kinds. Programs that you’ll probably need will not be installed by default, but at least there are dual-monitors; and most of them aren’t horrible. To the outside world, the writing on the wall may look like archaic inscriptions of a defunct language. To the programmers frantically scribbling them to solve graphics problems, they make even less sense.",
 		"tier": {
 			"main":"<i class='mdi mdi-artstation'></i>",
-			"extra":"<i class='mdi mdi-monitor-multiple'></i> GTX 1080 <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star'></i>"
+			"extra":"<i class='mdi mdi-monitor-multiple'></i> GTX 1080 Ti <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star'></i>"
 		}
 	},
 	{
@@ -697,7 +697,7 @@
 		"description":"Like its cousin on the block, <a onclick='document.body.click(); window.setTimeout(()=>document.getElementById(\"Joyce 201\").click(), 400)'>Joyce 201</a>, this is a CS PC lab. Woo.",
 		"tier":{
 			"main":"<i class='mdi mdi-stack-overflow'></i>",
-			"extra":"<i class='mdi mdi-monitor'></i> GT 210 <i class='mdi mdi-star-half'></i><i class='mdi mdi-star-outline'></i><i class='mdi mdi-star-outline'></i>"
+			"extra":"<i class='mdi mdi-monitor'></i> HD 530 <i class='mdi mdi-star-half'></i><i class='mdi mdi-star-outline'></i><i class='mdi mdi-star-outline'></i>"
 		}
 	},
 	{
@@ -863,7 +863,7 @@
 					},
 					{
 						"start": 1045,
-						"end": 1900
+						"end": 2000
 					},
 					{
 						"start":3600,
@@ -963,7 +963,7 @@
 		"description":"Home to many grunge and vaporwave-filled gaming sessions, and occasionally, work. For either task, the innards of these computers will suffice, so long as you have enough space for your repo, and don’t mind the single—albeit huge and 4K—screen life.",
 		"tier":{
 			"main":"<i class='mdi mdi-artstation'></i>",
-			"extra":"<i class='mdi mdi-monitor'></i><i class='mdi mdi-video-4k-box'></i> GTX 1080 <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star-half'></i>"
+			"extra":"<i class='mdi mdi-monitor'></i><i class='mdi mdi-video-4k-box'></i> GTX 1080 Ti <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star-half'></i>"
 		}
 	},
 	{
@@ -1216,7 +1216,7 @@
 		"description":"There are Macs in the basement of Ireland?",
 		"tier":{
 			"main":"<i class='mdi mdi-apple'></i>",
-			"extra":"<i class='mdi mdi-desktop-mac'></i><i class='mdi mdi-video-4k-box'></i> RX 580 <i class='mdi mdi-star'></i><i class='mdi mdi-star-outline'></i><i class='mdi mdi-star-outline'></i>"
+			"extra":"<i class='mdi mdi-desktop-mac'></i><i class='mdi mdi-video-4k-box'></i> Pro 580 <i class='mdi mdi-star'></i><i class='mdi mdi-star-outline'></i><i class='mdi mdi-star-outline'></i>"
 		}
 	},
 	{
@@ -1311,7 +1311,7 @@
 		"description":"Are the open Macs across the hall not doing it for you? Are you afraid of the number <a onclick='document.body.click(); window.setTimeout(()=>document.getElementById(\"Ireland 012\").click(), 400)'>12</a>? You’ve come to the adequate place.",
 		"tier":{
 			"main":"<i class='mdi mdi-apple'></i>",
-			"extra":"<i class='mdi mdi-desktop-mac'></i><i class='mdi mdi-video-4k-box'></i> RX 580 <i class='mdi mdi-star'></i><i class='mdi mdi-star-outline'></i><i class='mdi mdi-star-outline'></i>"
+			"extra":"<i class='mdi mdi-desktop-mac'></i><i class='mdi mdi-video-4k-box'></i> Pro 580 <i class='mdi mdi-star'></i><i class='mdi mdi-star-outline'></i><i class='mdi mdi-star-outline'></i>"
 		}
   },
   {
