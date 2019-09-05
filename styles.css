@@ -1,3 +1,8 @@
+/* Placeholder while MDI loads */
+.mdi:before{
+    content: "★"
+}
+
 #current{
     font-size: 1.25em;
 }
