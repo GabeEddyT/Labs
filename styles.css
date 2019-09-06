@@ -210,3 +210,7 @@ p {
 .capitalized{
     text-transform: capitalize;
 }
+
+.annotation{
+    color: purple;
+}

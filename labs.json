@@ -94,7 +94,20 @@
 					},
 					{
 						"start": 1515,
+						"end": 1700
+					},
+					{
+						"start": 1930,
 						"end": 2400
+					}
+				],
+				"annotations": [
+					{
+						"timeslot":{
+							"start": 1700,
+							"end": 1930
+						},
+						"message": "QA"
 					}
 				]
 			},
@@ -132,8 +145,17 @@
 						"end": 800
 					},
 					{
-						"start": 1645,
+						"start": 1930,
 						"end": 2400
+					}
+				],
+				"annotations": [
+					{
+						"timeslot":{
+							"start": 1700,
+							"end": 1930
+						},
+						"message": "QA"
 					}
 				]
 			},
@@ -169,7 +191,20 @@
 					},
 					{
 						"start": 1515,
+						"end": 1700
+					},
+					{
+						"start": 1930,
 						"end": 2400
+					}
+				],
+				"annotations": [
+					{
+						"timeslot":{
+							"start": 1700,
+							"end": 1930
+						},
+						"message": "QA"
 					}
 				]
 			},
@@ -215,8 +250,17 @@
 						"end":1400
 					},
 					{
-						"start": 1645,
+						"start": 1930,
 						"end": 2400
+					}
+				],
+				"annotations": [
+					{
+						"timeslot":{
+							"start": 1700,
+							"end": 1930
+						},
+						"message": "QA"
 					}
 				]
 			},

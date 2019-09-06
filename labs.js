@@ -205,6 +205,15 @@
 					addParagraph(rooms[i].name, compareTime(timeslot.end, time).toHours(), false, false, "text-align: center", remaining <= 15 ? "closedlist" : remaining <= 30 ? "laterlist" : remaining <= 60 ? "soonlist" : "openlist", "span");
 				}
 				addParagraph(rooms[i].name, "]", false, false, "text-align: center", "openlist", "span");
+
+				// Add annotation if it exists
+				let annotations;
+				if(annotations = rooms[i].days[(currentDay - 1)].annotations){
+					for (let anno of annotations){
+						const timeslot = new Timeslot(anno.timeslot.start, anno.timeslot.end);
+						timeslot.inTimeslot(time) && addParagraph(rooms[i].name, " " + anno.message, false, false, "text-align: center", "annotation", "span");
+					}
+				}
 			} else {
 				occupiedRooms.push(rooms[i]);
 			}
@@ -223,8 +232,18 @@
 				if (compareTime(timeslot.start, time) <= howSoon) {					
 					let name = occupiedRooms[i].name;
 					let description = occupiedRooms[i].description;
-					let tier = occupiedRooms[i].tier;
+					let tier = occupiedRooms[i].tier;				
 					let para = addParagraph("list", `${occupiedRooms[i].name} (${timeslot.range}) [${compareTime(timeslot.start, time).toHours()}]`, occupiedRooms[i].name, false, "text-align: center", pClass);
+
+					// Add annotation if it exists
+					let annotations;
+					if(annotations = occupiedRooms[i].days[(currentDay - 1)].annotations){
+						for (let anno of annotations){
+							const timeslot = new Timeslot(anno.timeslot.start, anno.timeslot.end);
+							timeslot.inTimeslot(time) && addParagraph(occupiedRooms[i].name, " " + anno.message, false, false, "text-align: center", "annotation", "span");
+						}
+					}
+
 					para.addEventListener("click", ()=>{showView(name, description, tier)});
 					para.style.cursor = "pointer";				
 				} else {
@@ -296,9 +315,11 @@
 				let timeslots = [];
 				for (var k = 0; k < roomsJ[i].days[j].timeslots.length; k++) {
 					let timeslot = roomsJ[i].days[j].timeslots[k];
-					timeslots[k] = new Timeslot(timeslot.start, timeslot.end);
+					timeslots[k] = new Timeslot(timeslot.start, timeslot.end);					
 				}
 				days[j] = new Day(timeslots);
+				const dayJ = roomsJ[i].days[j];
+				dayJ.annotations && (days[j].annotations = dayJ.annotations);
 			}
 			let room = roomsJ[i];
 			rooms[i] = new Room(room.name, days, room.link, room.description, room.tier);
