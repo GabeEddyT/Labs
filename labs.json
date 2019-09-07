@@ -79,7 +79,7 @@
 		"description":"Home to works of art—or works of shame and self-deprecation, depending on your outlook. Residing in the basement of CCM, this art lab has dual-monitors, art programs pre-installed, and machines good enough to run them; when they’re in the mood. Some say you can hear the cries of stressed game artists from the fourth floor, which would make sense, because there’s a stairwell next to the damn room. ",
 		"tier":{
 			"main":"<i class='mdi mdi-artstation'></i>",
-			"extra":"<i class='mdi mdi-monitor-multiple'></i> RTX 2080 <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star'></i>"
+			"extra":"<i class='mdi mdi-monitor-multiple'></i><i class='mdi mdi-speaker'></i> RTX 2080 <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star'></i>"
 		}
 	},
 	{
@@ -176,7 +176,7 @@
 		"description":"The primary domain of Quality Assurance and Cody’s <em>former</em> home. Only one monitor here, but (on paper, at least) these are some of the best computers Champlain has.",
 		"tier":{
 			"main":"<i class='mdi mdi-artstation'></i>",			
-			"extra":"<i class='mdi mdi-monitor'></i><i class='mdi mdi-video-4k-box'></i> GTX 1080 Ti <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star-half'></i>"
+			"extra":"<i class='mdi mdi-monitor'></i><i class='mdi mdi-video-4k-box'></i><i class='mdi mdi-speaker'></i> GTX 1080 Ti <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star-half'></i>"
 		}
 	},
 	{
@@ -285,7 +285,7 @@
 		"description": "Taking a look at the spec sheet, one would assume that these computers are great, and fast, and always run perfectly fine. When designers touch them, however, these PCs tend to prove the opposite. As the secondary home for QA, it’ll be occupied from 5:30–7:30 on Mondays, Thursdays, and Saturdays. Other than that, this lab has a pretty open schedule.",
 		"tier": {
 			"main":"<i class='mdi mdi-artstation'></i>",
-			"extra":"<i class='mdi mdi-monitor'></i> GTX 1070 <i class='mdi mdi-star'></i><i class='mdi mdi-star'><i class='mdi mdi-star-outline'></i>"
+			"extra":"<i class='mdi mdi-monitor'></i> GTX 1070<i class='mdi mdi-speaker'></i> <i class='mdi mdi-star'></i><i class='mdi mdi-star'><i class='mdi mdi-star-outline'></i>"
 		}
 	},
 	{
@@ -460,7 +460,7 @@
 		"description":"Home to all sorts of fun and enlightening classes such as Game Architecture, Game AI, and Graphics of all kinds. Programs that you’ll probably need will not be installed by default, but at least there are dual-monitors; and most of them aren’t horrible. To the outside world, the writing on the wall may look like archaic inscriptions of a defunct language. To the programmers frantically scribbling them to solve graphics problems, they make even less sense.",
 		"tier": {
 			"main":"<i class='mdi mdi-artstation'></i>",
-			"extra":"<i class='mdi mdi-monitor-multiple'></i> GTX 1080 Ti <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star'></i>"
+			"extra":"<i class='mdi mdi-monitor-multiple'></i><i class='mdi mdi-speaker'></i> GTX 1080 Ti <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star'></i>"
 		}
 	},
 	{
@@ -543,7 +543,7 @@
 		"description":"A CS PC lab. Since Computer Science majors <em>clearly</em> don’t care for performant parts, why bother? These machines are equipped with GT 210s, and roar at the sight of any modern webpage.",
 		"tier":{
 			"main":"<i class='mdi mdi-stack-overflow'></i>",
-			"extra":"<i class='mdi mdi-monitor'></i> GT 210 <i class='mdi mdi-star-half'></i><i class='mdi mdi-star-outline'></i><i class='mdi mdi-star-outline'></i>"
+			"extra":"<i class='mdi mdi-monitor'></i><i class='mdi mdi-speaker'></i> GT 210 <i class='mdi mdi-star-half'></i><i class='mdi mdi-star-outline'></i><i class='mdi mdi-star-outline'></i>"
 		}
 	},
 	{
@@ -1007,7 +1007,7 @@
 		"description":"Home to many grunge and vaporwave-filled gaming sessions, and occasionally, work. For either task, the innards of these computers will suffice, so long as you have enough space for your repo, and don’t mind the single—albeit huge and 4K—screen life.",
 		"tier":{
 			"main":"<i class='mdi mdi-artstation'></i>",
-			"extra":"<i class='mdi mdi-monitor'></i><i class='mdi mdi-video-4k-box'></i> GTX 1080 Ti <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star-half'></i>"
+			"extra":"<i class='mdi mdi-monitor'></i><i class='mdi mdi-video-4k-box'></i><i class='mdi mdi-speaker'></i> GTX 1080 Ti <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star-half'></i>"
 		}
 	},
 	{
@@ -1458,7 +1458,7 @@
 		"description": "Ah, yes, Ireland Eleventy-Seven: My favorite lab with dual-monitors. So many years spent in this existent lab with RTX 2060s and eight-core Coffee Lakes.",
 		"tier": {
 			"main": "<i class='mdi mdi-artstation'></i>",
-			"extra": "<i class='mdi mdi-monitor-multiple''></i> RTX 2060 <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star'></i>"
+			"extra": "<i class='mdi mdi-monitor-multiple'></i> RTX 2060 <i class='mdi mdi-star'></i><i class='mdi mdi-star'></i><i class='mdi mdi-star'></i>"
 		}
   	},
   	{
