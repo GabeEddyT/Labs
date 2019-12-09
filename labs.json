@@ -93,22 +93,11 @@
 						"end": 800
 					},
 					{
-						"start": 1515,
-						"end": 1700
-					},
-					{
-						"start": 1930,
+						"start": 1730,
 						"end": 2400
 					}
 				],
 				"annotations": [
-					{
-						"timeslot":{
-							"start": 1700,
-							"end": 1930
-						},
-						"message": "QA"
-					}
 				]
 			},
 			{
@@ -119,7 +108,7 @@
 						"end": 800
 					},
 					{
-						"start": 1645,
+						"start": 1730,
 						"end": 2400
 					}
 				]
@@ -129,10 +118,10 @@
 				"timeslots": [
 					{
 						"start": 0,
-						"end": 930
+						"end": 800
 					},
 					{
-						"start": 1645,
+						"start": 1430,
 						"end": 2400
 					}
 				]
@@ -145,18 +134,11 @@
 						"end": 800
 					},
 					{
-						"start": 1930,
+						"start": 1730,
 						"end": 2400
 					}
 				],
-				"annotations": [
-					{
-						"timeslot":{
-							"start": 1700,
-							"end": 1930
-						},
-						"message": "QA"
-					}
+				"annotations": [					
 				]
 			},
 			{
@@ -167,7 +149,7 @@
 						"end": 800
 					},
 					{
-						"start": 1645,
+						"start": 1730,
 						"end": 2400
 					}
 				]
@@ -190,22 +172,11 @@
 						"end": 800
 					},
 					{
-						"start": 1515,
-						"end": 1700
-					},
-					{
-						"start": 1930,
+						"start": 1730,
 						"end": 2400
 					}
 				],
 				"annotations": [
-					{
-						"timeslot":{
-							"start": 1700,
-							"end": 1930
-						},
-						"message": "QA"
-					}
 				]
 			},
 			{
@@ -213,14 +184,10 @@
 				"timeslots": [
 					{
 						"start": 0,
-						"end": 930
+						"end": 1415
 					},
 					{
-						"start":1045,
-						"end":1400
-					},
-					{
-						"start": 1645,
+						"start":1730,
 						"end": 2400
 					}
 				]
@@ -230,10 +197,10 @@
 				"timeslots": [
 					{
 						"start": 0,
-						"end": 930
+						"end": 800
 					},
 					{
-						"start":1215,
+						"start":1430,
 						"end":2400
 					}
 				]
@@ -246,22 +213,15 @@
 						"end": 800
 					},
 					{
-						"start":1215,
-						"end":1400
+						"start":1115,
+						"end":1415
 					},
 					{
-						"start": 1930,
+						"start": 1730,
 						"end": 2400
 					}
 				],
 				"annotations": [
-					{
-						"timeslot":{
-							"start": 1700,
-							"end": 1930
-						},
-						"message": "QA"
-					}
 				]
 			},
 			{
@@ -269,14 +229,14 @@
 				"timeslots": [
 					{
 						"start": 0,
-						"end": 930
+						"end": 800
 					},
 					{
-						"start":1045,
-						"end":1400
+						"start":1115,
+						"end":1415
 					},
 					{
-						"start": 1645,
+						"start": 1730,
 						"end": 2400
 					}
 				]
@@ -931,10 +891,10 @@
 				"timeslots": [
 					{
 						"start": 0,
-						"end": 930
+						"end": 1100
 					},
 					{
-						"start": 1515,
+						"start": 1745,
 						"end": 2400
 					}
 				]
@@ -944,10 +904,10 @@
 				"timeslots": [
 					{
 						"start": 0,
-						"end": 930
+						"end": 1100
 					},
 					{
-						"start": 1645,
+						"start": 1745,
 						"end": 2400
 					}
 				]
@@ -957,18 +917,14 @@
 				"timeslots": [
 					{
 						"start": 0,
-						"end": 930
+						"end": 800
 					},
 					{
-						"start":1215,
-						"end":1530
-					},
-					{
-						"start": 1645,
+						"start": 1430,
 						"end": 1730
 					},
 					{
-						"start":2015,
+						"start":2045,
 						"end":2400
 					}
 				]
@@ -978,10 +934,10 @@
 				"timeslots": [
 					{
 						"start": 0,
-						"end": 1400
+						"end": 1415
 					},
 					{
-						"start": 1645,
+						"start": 1745,
 						"end": 2400
 					}
 				]
@@ -991,14 +947,14 @@
 				"timeslots": [
 					{
 						"start": 0,
-						"end": 930
+						"end": 800
 					},
 					{
-						"start": 1045,
-						"end": 1230
+						"start": 1115,
+						"end": 215
 					},
 					{
-						"start": 1645,
+						"start": 1745,
 						"end": 2400
 					}
 				]
